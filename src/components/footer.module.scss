@@ -1,0 +1,13 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+.footer {
+    margin-top: 2rem;
+    align-items: center;
+    font-family: sans-serif;
+    display: block;
+    text-align: center;
+    padding: 3rem 0;
+    background-color: $primary-color;
+    font: 100% $font-stack;
+}
