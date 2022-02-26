@@ -1,27 +1,15 @@
-$primary-color: #333;
+@use 'variables';
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+$primary-color: #121212;
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: $primary-color;
-  text-align: center;
-  padding: 1rem 0;
+  @include variables.global;
+  background-color: $primary-color;
+  border-top: 1px solid variables.$borderColor;
+  padding: 2rem 0;
   font-family: 'Roboto Mono', monospace;
-  color: white;
-
-  a {
-    color: paleturquoise;
-  }
-
-  a:visited {
-    color: palevioletred;
-  }
-
-  a:hover {
-    color: plum;
-  }
+  color: variables.$fontColor;
+  text-align: center;
 
   img {
     max-height: 25px;

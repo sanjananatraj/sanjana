@@ -1,5 +1,6 @@
 import * as React from "react"
-import { footer } from "./footer.module.scss"
+// import { footer } from "./footer.module.scss"
+import * as styles from "../styles/footer.module.scss"
 import github from "../images/icons8-github-100.png"
 import resume from "../images/icons8-resume-100.png"
 import linkedin from "../images/icons8-linkedin-100.png"
@@ -12,12 +13,13 @@ const links = [
 
 const Footer = () =>{
   return(
-    <footer className={footer}>
+    <footer className={styles.footer}>
       © {new Date().getFullYear()} Sanjana Natraj. Built with
       {` `}
       <a target="_blank" rel="noreferrer" href="https://www.gatsbyjs.com">Gatsby</a>.
       {` `}
       Icons by <a target="_blank" rel="noreferrer" href="https://icons8.com">Icons8</a>
+
       <br></br>
       <br></br>
 

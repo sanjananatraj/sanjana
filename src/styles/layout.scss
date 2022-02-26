@@ -1,0 +1,8 @@
+@use 'variables';
+@include variables.global;
+
+.container {
+  margin: auto;
+  max-width: variables.$maxWidth;
+  padding: 0 1rem 1.5rem;
+}

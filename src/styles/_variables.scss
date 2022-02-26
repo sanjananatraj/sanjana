@@ -1,0 +1,54 @@
+// global website styling
+$primary: #8F61DB;
+$secondary: #FC90AF;
+$linkColor: palevioletred;
+$borderColor: #EDBBCE;
+$titleColor: #EFDCCE;
+$accent: #2E36AA;
+$background: #292929;
+$hoverColor: #565ed1;
+$blockquoteColor: #e3b35b;
+$scrollbarColor: #502688;
+$subtitleColor: #ddd3ed;
+$maxWidth: 900px;
+$fontColor: white;
+$fontFamily: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+@mixin global {
+  @include headers;
+  body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: $fontFamily;
+    font-size: 1rem;
+    color: white;
+    background-color: $background;
+  }
+
+  main {
+    min-height: calc(100vh - 280px);
+  }
+  
+  a {
+    color: $linkColor;
+  }
+  
+  a:hover {
+    color: $hoverColor;
+  }
+}
+
+@mixin headers {
+  h1 {
+    color: $titleColor;
+    font-size: 2.5rem;
+  }
+
+  h2, h3, h4 {
+    color: $subtitleColor;
+    font-size: 1.5rem;
+    line-height: 1rem;
+  }
+}
