@@ -14,16 +14,14 @@ const links = [
 const Footer = () =>{
   return(
     <footer className={styles.footer}>
-      © {new Date().getFullYear()} Sanjana Natraj. Built with
-      {` `}
+      © {new Date().getFullYear()} Sanjana Natraj. Built with&nbsp;
       <a target="_blank" rel="noreferrer" href="https://www.gatsbyjs.com">Gatsby</a>.
-      {` `}
-      Icons by <a target="_blank" rel="noreferrer" href="https://icons8.com">Icons8</a>
-
+      Icons by&nbsp;<a target="_blank" rel="noreferrer" href="https://icons8.com">Icons8</a>
+      
       <br></br>
       <br></br>
-
-      <section>
+      
+      <div className={styles.footerNav}>
         <nav>
           {links.map((link) => (
             <a 
@@ -32,12 +30,12 @@ const Footer = () =>{
               rel="noreferrer"
               key={link.label}
             >
-              <img src={link.icon} alt={link.label} />
+              <img src={link.icon} alt={link.label} title={link.label} />
               <span title={link.label}>{link.label}</span>
             </a>
           ))}
         </nav>
-      </section>
+      </div>
     </footer>
   )
 }

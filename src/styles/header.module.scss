@@ -1,0 +1,62 @@
+@use 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto+Mono:ital,wght@0,500;1,400&display=swap');
+@include variables.global;
+$font: 'Roboto Mono', monospace;
+$primary-color: #121212;
+
+.header{
+  background-color: $primary-color;
+  border-bottom: 1px solid variables.$borderColor;
+  font-family: $font;
+  color: variables.$fontColor;
+  padding: 1rem;
+}
+
+//flex parent container
+.headerContainer { 
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+  max-width: variables.$maxWidth;
+  font-size: 1.3rem;
+}
+
+// flex items
+.headerNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  img {
+    max-height: 30px;
+    width: auto;
+    float: left;
+  }
+}
+
+// title styling
+.headerTitle {
+  letter-spacing: 0rem;
+  max-width: variables.$maxWidth;
+  margin-left: auto;
+  margin-right: auto;
+  color: variables.$primary !important;
+  font-size: 2.5rem;
+  text-decoration: none;
+  :hover {
+    background-color: variables.$background;
+    color: variables.$titleColor;
+    text-decoration: none;
+  }
+}
+
+// override normal link styling for these nav links
+#headerLinks {
+  color: #6ebcd4;
+  :hover {
+    color: variables.$hoverColor;
+    text-decoration: underline;
+  }
+}

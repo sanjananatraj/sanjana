@@ -1,4 +1,5 @@
 // global website styling
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 $primary: #8F61DB;
 $secondary: #FC90AF;
 $linkColor: palevioletred;
@@ -12,7 +13,7 @@ $scrollbarColor: #502688;
 $subtitleColor: #ddd3ed;
 $maxWidth: 900px;
 $fontColor: white;
-$fontFamily: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+$fontFamily: -apple-system, BlinkMacSystemFont, 'Inter', Roboto, Oxygen,
 Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
 @mixin global {
@@ -28,7 +29,7 @@ Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   main {
-    min-height: calc(100vh - 280px);
+    min-height: calc(100vh - 270px);
   }
   
   a {
