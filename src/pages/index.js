@@ -1,6 +1,4 @@
 import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image"
-
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
@@ -12,10 +10,10 @@ import ProjectSection from "../components/sections/projectsSection"
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-      <Hero />
-      <AboutMe />
-      <Experience />
-      <ProjectSection />
+      <Hero id='hero' />
+      <AboutMe id='aboutme' />
+      <Experience id='experience' />
+      <ProjectSection id='projectsSection' />
   </Layout>
 )
 
