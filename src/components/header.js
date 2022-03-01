@@ -17,7 +17,7 @@ const Header = ({ siteTitle }) => (
     <div className={styles.headerContainer}>
       <nav className={styles.headerNav}>
         <Link to="/" className={styles.headerTitle}>
-          <b>{siteTitle}</b>
+          {siteTitle}
         </Link>
       </nav>
       <div>

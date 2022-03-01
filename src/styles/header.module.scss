@@ -2,14 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto+Mono:ital,wght@0,500;1,400&display=swap');
 @include variables.global;
 $font: 'Roboto Mono', monospace;
-$primary-color: #121212;
 
 .header{
-  background-color: $primary-color;
+  background-color: variables.$headerFooterColor;
   border-bottom: 1px solid variables.$borderColor;
   font-family: $font;
   color: variables.$fontColor;
   padding: 1rem;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
 }
 
 //flex parent container

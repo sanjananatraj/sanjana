@@ -3,16 +3,17 @@
 $primary: #8F61DB;
 $secondary: #FC90AF;
 $linkColor: palevioletred;
-$borderColor: #EDBBCE;
+$borderColor: #525252;
 $titleColor: #EFDCCE;
 $accent: #2E36AA;
 $background: #292929;
 $hoverColor: #565ed1;
 $blockquoteColor: #e3b35b;
-$scrollbarColor: #502688;
+$scrollbarColor: #EDBBCE;
 $subtitleColor: #ddd3ed;
 $maxWidth: 900px;
-$fontColor: white;
+$fontColor: #d9d9d9;
+$headerFooterColor: #121212;
 $fontFamily: -apple-system, BlinkMacSystemFont, 'Inter', Roboto, Oxygen,
 Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
@@ -24,7 +25,7 @@ Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     -moz-osx-font-smoothing: grayscale;
     font-family: $fontFamily;
     font-size: 1rem;
-    color: white;
+    color: $fontColor;
     background-color: $background;
   }
 
@@ -38,6 +39,18 @@ Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   
   a:hover {
     color: $hoverColor;
+  }
+
+  //scrollbar
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background: $headerFooterColor;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $scrollbarColor;
+    border-radius: 0;
   }
 }
 
