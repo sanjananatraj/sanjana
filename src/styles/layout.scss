@@ -4,5 +4,29 @@
 .container {
   margin: auto;
   max-width: variables.$maxWidth;
-  padding: 4.9rem 1rem 2rem;
+  padding: 1rem 2rem;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px 100px;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar {
+  width: 100%;
+  height: 120px; // experiment with this value, try changing to 110vh
+  overflow: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 80%;
+  border: solid 2px variables.$borderColor;
+  right: 0%;
+  padding-right: 1rem;
+
 }

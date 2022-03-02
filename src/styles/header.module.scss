@@ -10,7 +10,6 @@ $font: 'Roboto Mono', monospace;
   color: variables.$fontColor;
   padding: 1rem;
   z-index: 10;
-  position: fixed;
   width: 100%;
 }
 
@@ -44,8 +43,8 @@ $font: 'Roboto Mono', monospace;
   max-width: variables.$maxWidth;
   margin-left: auto;
   margin-right: auto;
-  color: variables.$primary !important;
-  font-size: 2.5rem;
+  color: variables.$fontColor !important;
+  font-size: 1.5rem;
   text-decoration: none;
   :hover {
     background-color: variables.$background;
@@ -58,7 +57,7 @@ $font: 'Roboto Mono', monospace;
 #headerLinks {
   color: #6ebcd4;
   :hover {
-    color: variables.$hoverColor;
+    color: #4598b1;
     text-decoration: underline;
   }
 }

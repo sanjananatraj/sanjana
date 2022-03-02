@@ -1,19 +1,19 @@
 // global website styling
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
-$primary: #8F61DB;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+$primary: #ccd1ff;
 $secondary: #FC90AF;
 $linkColor: palevioletred;
-$borderColor: #525252;
-$titleColor: #EFDCCE;
+$borderColor: #0f0f0f;
+$titleColor: #9c8bd3;
 $accent: #2E36AA;
-$background: #292929;
-$hoverColor: #565ed1;
+$background: #1a191d;
+$hoverColor: #ad5470;
 $blockquoteColor: #e3b35b;
 $scrollbarColor: #EDBBCE;
 $subtitleColor: #ddd3ed;
-$maxWidth: 900px;
+$maxWidth: 1000px;
 $fontColor: #d9d9d9;
-$headerFooterColor: #121212;
+$headerFooterColor: #0f0e11;
 $fontFamily: -apple-system, BlinkMacSystemFont, 'Inter', Roboto, Oxygen,
 Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
@@ -27,6 +27,7 @@ Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-size: 1rem;
     color: $fontColor;
     background-color: $background;
+    overflow-x: hidden;
   }
 
   main {

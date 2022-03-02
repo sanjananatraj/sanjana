@@ -1,5 +1,7 @@
 @use 'variables';
 @include variables.global;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
+
 
 .hero {
   display: flex;
@@ -8,14 +10,17 @@
   align-items: flex-start;
   min-height: 100vh;
   margin-top: -50px;
+
   h2 {
     font-size: clamp(50px, 10vw, 100px);
-    color: variables.$secondary;
+    font-weight: 500;
+    color: #7c779e;
   }
 
   h3 {
     margin-bottom: -20px;
   }
+
   animation: fadeInAnimation ease 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;

@@ -1,10 +1,11 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import * as styles from "../../styles/sections.module.scss"
+import cat from "../../images/icons8-cat-64.png"
 
-const AboutMe = (props) => (
+const AboutMe = ({ pageRefs }) => (
   <>
-    <section id={props.id}>
+    <section id='#aboutme' ref={el => pageRefs.current = { ...pageRefs.current, aboutme: el}}>
       <h1>About me</h1>
         <ul>
           <li><Link to="/page-2/">Go to page 2</Link></li>
@@ -18,7 +19,6 @@ const AboutMe = (props) => (
 
         <p>Aliquam vitae pulvinar diam, ac elementum enim. Donec consectetur interdum libero, in feugiat est laoreet id. Proin erat nulla, hendrerit at ornare et, iaculis at nulla. Maecenas lobortis commodo erat, non egestas ipsum tristique eu. Sed ullamcorper elementum interdum. Vestibulum a pretium magna. Sed et lectus justo. Proin sit amet nisi arcu. Praesent faucibus eleifend ex eu suscipit. Sed id dolor maximus, tincidunt purus at, hendrerit erat. Nulla fringilla aliquam ligula ac lacinia. Aenean dapibus tortor dui, id pellentesque lorem lacinia vitae. Nam commodo porttitor felis, et molestie odio lobortis a. Sed ornare diam sed nunc fermentum, vel elementum est congue. Nulla feugiat neque in dolor vestibulum gravida. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
       </section>
-      <hr></hr>
   </>
 )
 
