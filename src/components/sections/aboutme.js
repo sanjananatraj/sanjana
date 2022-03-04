@@ -1,23 +1,28 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import * as styles from "../../styles/sections.module.scss"
-import cat from "../../images/icons8-cat-64.png"
+import night from "../../images/icons8-night-100.png"
 
 const AboutMe = ({ pageRefs }) => (
   <>
     <section id='#aboutme' ref={el => pageRefs.current = { ...pageRefs.current, aboutme: el}}>
-      <h1>About me</h1>
-        <ul>
-          <li><Link to="/page-2/">Go to page 2</Link></li>
-          <li><Link to="/using-typescript/">Go to "Using TypeScript"</Link></li>
-          <li><Link to="/using-ssr">Go to "Using SSR"</Link></li>
-          <li><Link to="/using-dsg">Go to "Using DSG"</Link></li>
-        </ul>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla laoreet tristique orci, at vulputate neque ultrices sed. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris tincidunt eget justo sed consequat. Suspendisse in imperdiet justo. In tempus vulputate volutpat. Donec ut quam nibh. Morbi molestie vel justo a sollicitudin.</p>
+      <h1><img src={night} alt="cloud and a moon"></img>{' '}About me</h1>
+      <p>Hello! My name is Sanjana and I like building all sorts of things. I particularly love all things web development and front-facing software. Based in the Bay Area, my interest in coding started when I was in high school, as I was surrounded by all sorts of people in tech. I particularly liked creating and designing websites with HTML, CSS and JavaScript. I joined my local Girls Who Code club in high school, which accelerated my interest in coding.</p>
 
-        <p>Cras accumsan porta ipsum, vitae consectetur purus fringilla a. Donec eros tellus, posuere a convallis in, commodo id orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed sed mollis nibh. Integer at mattis ex. Sed erat tellus, sagittis in risus eu, elementum sodales mauris. Proin aliquam vitae felis ut pellentesque. Quisque fermentum, eros id egestas suscipit, nulla justo consequat velit, eu interdum purus eros ut turpis. Aliquam sed augue lacinia, blandit nisl non, pellentesque odio. Nam eget hendrerit velit. Nam dictum diam ut erat egestas tempus. Integer finibus porttitor libero et efficitur. Suspendisse potenti. Fusce ut bibendum ante, sed interdum ipsum. Duis gravida faucibus magna, eu rhoncus ipsum pellentesque sed.</p>
+      <p>Now, I have a Bachelor's degree in computer science from UCSC, and I'm currently seeking out new opportunities for front end software engineering positions! Reach out to me here.</p>
 
-        <p>Aliquam vitae pulvinar diam, ac elementum enim. Donec consectetur interdum libero, in feugiat est laoreet id. Proin erat nulla, hendrerit at ornare et, iaculis at nulla. Maecenas lobortis commodo erat, non egestas ipsum tristique eu. Sed ullamcorper elementum interdum. Vestibulum a pretium magna. Sed et lectus justo. Proin sit amet nisi arcu. Praesent faucibus eleifend ex eu suscipit. Sed id dolor maximus, tincidunt purus at, hendrerit erat. Nulla fringilla aliquam ligula ac lacinia. Aenean dapibus tortor dui, id pellentesque lorem lacinia vitae. Nam commodo porttitor felis, et molestie odio lobortis a. Sed ornare diam sed nunc fermentum, vel elementum est congue. Nulla feugiat neque in dolor vestibulum gravida. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+      <p>Some technologies I've been using lately are:</p>
+      <ul class={styles.skills}>
+        <li>React</li>
+        <li>ES6 JavaScript</li>
+        <li>GraphQL</li>
+        <li>Node.js</li>
+        <li>Flask</li>
+        <li>Python</li>
+      </ul>
+
+      
+      ➡️<Link to='/about'>More about me</Link>
       </section>
   </>
 )

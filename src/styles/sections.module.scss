@@ -1,6 +1,7 @@
 @use 'variables';
 @include variables.global;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 
 .hero {
@@ -9,16 +10,21 @@
   flex-direction: column;
   align-items: flex-start;
   min-height: 100vh;
-  margin-top: -50px;
+  padding: 0px !important;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  margin-top: -5rem;
 
   h2 {
     font-size: clamp(50px, 10vw, 100px);
     font-weight: 500;
     color: #7c779e;
+    line-height: 1.1rem;
   }
 
   h3 {
     margin-bottom: -20px;
+    line-height: 1.1rem;
   }
 
   animation: fadeInAnimation ease 2s;
@@ -32,5 +38,63 @@
     100% {
         opacity: 1;
      }
+  } 
 }
+
+.skills{
+  display: grid;
+  grid-template-columns: 150px 150px;
+  font-family: 'Roboto Mono', monospace;
+
+  ::marker {
+    content: "♡ ";
+  }
+  color: variables.$primary;
 }
+
+.exp {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-row-gap: 50px;
+}
+
+.expChild {
+  li {
+    padding-bottom: 0.5rem;
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  ::marker {
+    content: "♡ ";
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  h5 {
+    margin-top: 5px;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  img {
+    max-height: 16px;
+    padding: 2px;
+  }
+
+  margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .exp {
+    grid-template-columns: 1fr;
+    grid-row-gap: 0px;
+  }
+}
+
+// .expChild:nth-of-type(even){
+//   flex: 2;
+// }

@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 $primary: #ccd1ff;
 $secondary: #FC90AF;
-$linkColor: palevioletred;
+$linkColor: #cba8e3;
 $borderColor: #0f0f0f;
 $titleColor: #9c8bd3;
 $accent: #2E36AA;
 $background: #1a191d;
-$hoverColor: #ad5470;
+$hoverColor: #b17fd4;
 $blockquoteColor: #e3b35b;
 $scrollbarColor: #EDBBCE;
 $subtitleColor: #ddd3ed;
@@ -24,7 +24,6 @@ Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: $fontFamily;
-    font-size: 1rem;
     color: $fontColor;
     background-color: $background;
     overflow-x: hidden;
@@ -53,6 +52,10 @@ Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     background: $scrollbarColor;
     border-radius: 0;
   }
+
+  p {
+    line-height: 1.1;
+  }
 }
 
 @mixin headers {
@@ -64,6 +67,5 @@ Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   h2, h3, h4 {
     color: $subtitleColor;
     font-size: 1.5rem;
-    line-height: 1rem;
   }
 }

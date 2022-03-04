@@ -14,9 +14,9 @@ const links = [
 const Footer = () =>{
   return(
     <footer className={styles.footer}>
-      © {new Date().getFullYear()} Sanjana Natraj. Built with&nbsp;
-      <a target="_blank" rel="noreferrer" href="https://www.gatsbyjs.com">Gatsby</a>.
-      Icons by&nbsp;<a target="_blank" rel="noreferrer" href="https://icons8.com">Icons8</a>
+      © {new Date().getFullYear()} Sanjana Natraj. 
+      Icons by&nbsp;<a target="_blank" rel="noreferrer" href="https://icons8.com">Icons8</a>.{' '}
+      Built with&nbsp;<a target="_blank" rel="noreferrer" href="https://www.gatsbyjs.com">Gatsby</a> and lots of 💜
       
       <br></br>
       <br></br>
