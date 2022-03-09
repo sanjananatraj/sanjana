@@ -9,6 +9,7 @@ import ProjectSection from "../components/sections/projectsSection"
 import Nav from "../components/nav"
 
 const IndexPage = () => {
+  //keep an array of section components for nav
   const pageRefs = React.useRef({});
   return (
     <Layout>

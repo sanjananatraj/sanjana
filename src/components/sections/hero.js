@@ -3,7 +3,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import * as styles from "../../styles/sections.module.scss"
 
-const Hero = ({pageRefs}) => (
+const Hero = ({ pageRefs }) => (
   <section className={styles.hero} id='#hero' ref={el => {pageRefs.current = { ...pageRefs.current, hero: el}}}>
     <h3>Hi there! I&apos;m</h3>
     <h2>Sanjana Natraj.</h2>

@@ -8,8 +8,8 @@ import moonAndStars from "../images/icons8-moon-and-stars-100.png"
 
 const links = [
   { url: '/about', label: 'about', icon: cat },
-  { url: '/projects', label: 'projects', icon: fog  },
-  { url: '/credits', label: 'credits', icon: moonAndStars  }
+  { url: '/projects', label: 'projects', icon: fog },
+  { url: '/credits', label: 'credits', icon: moonAndStars }
 ]
 
 const Header = ({ siteTitle }) => (

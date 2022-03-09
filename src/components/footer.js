@@ -7,7 +7,7 @@ import linkedin from "../images/icons8-linkedin-100.png"
 const links = [
   { url: 'https://github.com/sanjananatraj', label: 'Github', icon: github },
   { url: 'https://www.linkedin.com/in/sanjana-natraj/', label: 'LinkedIn', icon: linkedin },
-  { url: '/', label: 'Resume', icon: resume }
+  { url: '/SanjanaNatrajResume.pdf', label: 'Resume', icon: resume }
 ]
 
 const Footer = () => (
