@@ -1,11 +1,10 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import PropTypes from "prop-types"
 import * as styles from "../../styles/sections.module.scss"
 import spring from "../../images/icons8-spring-100.png"
-import react from "../../images/icons8-react-100.png"
 
 const jobs = [
-  {'company': 'ZeroUI', 'title': 'Software Engineering Intern', 'descriptions': [
+  {'company': 'ZeroUI', 'title': 'Software Engineer', 'descriptions': [
       "Optimized website's loading speed by 43% by implementing infinite scrolling using React, Async JavaScript, and Flask",
       "Implemented playlist functionality, explore page, and user profile pages with Bootstrap and SASS",
       "Built 15+ reusable React components and methods for future use",
@@ -25,27 +24,29 @@ const jobs = [
 ]
 
 const Experience = ({ pageRefs }) => (
-  <>
-    <section id='#experience' ref={el => {pageRefs.current = { ...pageRefs.current, experience: el}}}>
-      <h1><img src={spring} alt="spring flower"></img>{' '}Experience</h1>
-      <div className={styles.exp}>
-        {jobs.map((job) => (
-          <>
-            <div className={styles.expChild}>
-              <h3>{job.company}</h3>
-              <h5>{job.title}</h5>
-            </div>
+  <section id='#experience' ref={el => {pageRefs.current = { ...pageRefs.current, experience: el}}}>
+    <h1><img src={spring} alt="spring flower"></img>{' '}Experience</h1>
+    <div className={styles.exp}>
+      {jobs.map((job, index) => (
+        <React.Fragment key={index}>
+          <div className={styles.expChild}>
+            <h3>{job.company}</h3>
+            <h5>{job.title}</h5>
+          </div>
 
-            <ul className={styles.expChild}>
-              {job.descriptions.map((desc) => (
-                <li>{desc}</li>
-              ))}
-            </ul>
-          </>
-        ))}
-      </div>
-    </section>
-  </>
+          <ul className={styles.expChild}>
+            {job.descriptions.map((desc, index) => (
+              <li key={index}>{desc}</li>
+            ))}
+          </ul>
+        </React.Fragment>
+      ))}
+    </div>
+  </section>
 )
+
+Experience.propTypes = {
+  pageRefs: PropTypes.object.isRequired
+}
 
 export default Experience

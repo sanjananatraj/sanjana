@@ -1,10 +1,11 @@
 import * as React from "react"
-import * as styles from "../styles/nav.module.scss";
+import PropTypes from "prop-types"
+import * as styles from "../styles/nav.module.scss"
 
 const Nav = ({ pageRefs }) => {
   function scrollIntoView(type) {
     pageRefs.current[type].scrollIntoView({ behavior: "smooth"});
-  };
+  }
 
   return (
     <>
@@ -18,6 +19,10 @@ const Nav = ({ pageRefs }) => {
       </div>
     </>
   )
+}
+
+Nav.propTypes = {
+  pageRefs: PropTypes.object.isRequired
 }
 
 export default Nav;
