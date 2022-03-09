@@ -18,10 +18,10 @@
 
   h2 {
     font-size: clamp(50px, 10vw, 100px);
-    font-weight: 500;
     color: #7c779e;
-    line-height: 1.1;
+    line-height: 1;
     margin: 0;
+    font-family: variables.$fontSans;
   }
 
   h3 {

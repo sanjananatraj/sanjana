@@ -1,7 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 // import { Link } from "gatsby"
-// import * as styles from "../../styles/sections.module.scss"
+import * as styles from "../../styles/sections.module.scss"
 import sun from "../../images/icons8-sun-128.png"
 
 const ProjectSection = ({pageRefs}) => (

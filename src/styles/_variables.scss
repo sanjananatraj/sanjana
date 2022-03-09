@@ -2,20 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 $primary: #ccd1ff;
 $secondary: #FC90AF;
-$linkColor: #cba8e3;
+$linkColor: #9b5af7;
 $borderColor: #0f0f0f;
-$titleColor: #9c8bd3;
+$titleColor: #cabadf;
 $accent: #2E36AA;
-$background: #1a191d;
-$hoverColor: #b17fd4;
+$background: #16072b;
+$hoverColor: #723bc0;
 $blockquoteColor: #e3b35b;
 $scrollbarColor: #EDBBCE;
 $subtitleColor: #ddd3ed;
 $maxWidth: 1000px;
-$fontColor: #d9d9d9;
-$headerFooterColor: #0f0e11;
+$fontColor: #b7adc4;
+$headerFooterColor: #0f041d;
 $fontFamily: -apple-system, BlinkMacSystemFont, 'Inter', Roboto, Oxygen,
 Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+$fontSans: 'Colfax', 'Inter', sans-serif;
+
+@font-face {
+  font-family: 'Colfax';
+  src: url("../fonts/Colfax-Regular.otf") format("opentype");
+}
 
 @mixin global {
   @include headers;
@@ -54,7 +60,7 @@ Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   p {
-    line-height: 1.1;
+    line-height: 1.3;
   }
 }
 
