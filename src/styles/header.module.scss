@@ -9,7 +9,6 @@ $font: 'Roboto Mono', monospace;
   font-family: $font;
   color: variables.$fontColor;
   padding: 1rem;
-  z-index: 10;
   width: 100%;
 }
 
@@ -22,6 +21,8 @@ $font: 'Roboto Mono', monospace;
   justify-content: space-between;
   max-width: variables.$maxWidth;
   font-size: 1.3rem;
+  position: relative;
+  z-index: 10;
 }
 
 // flex items

@@ -13,6 +13,8 @@
   -webkit-box-align: center;
   -webkit-box-pack: center;
   margin-top: -5rem;
+  position: static;
+  z-index: 1;
 
   h2 {
     font-size: clamp(50px, 10vw, 100px);

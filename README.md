@@ -3,7 +3,7 @@
 
 This is the source code of my personal website! This website was built using [Gatsby](https://www.gatsbyjs.com/), specifically from Gatsby's starter default. Gatsby is a React-based, GraphQL powered static site generator. It also uses Webpack, Babel, and ESLint, and it has support for TypeScript. 
 
-For optimal performance, the website is hosted on [Netlify] (https://www.netlify.com/), utilizing [Jamstack](https://jamstack.org/) architecture. 
+For optimal performance, the website is hosted on [Netlify](https://www.netlify.com/), utilizing [Jamstack](https://jamstack.org/) architecture. 
 
-# About this repo
-This website was not intended to be used as a template, so there is no guidance to that. I suggest creating a Gatsby site with [gatsby-starter-default](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-default) and building a website from there.
+## About this repo
+This website was not intended to be used as a template, so there is no guidance for that. I suggest creating a Gatsby site with [gatsby-starter-default](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-default) and building a website from there.

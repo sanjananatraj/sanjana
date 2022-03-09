@@ -1,5 +1,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
+import { Fade } from "react-awesome-reveal"
 import * as styles from "../../styles/sections.module.scss"
 import spring from "../../images/icons8-spring-100.png"
 

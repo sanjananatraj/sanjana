@@ -1,6 +1,7 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { Fade } from "react-awesome-reveal";
 
 import Hero from "../components/sections/hero"
 import AboutMe from "../components/sections/aboutme"
@@ -11,15 +12,22 @@ import Nav from "../components/nav"
 const IndexPage = () => {
   //keep an array of section components for nav
   const pageRefs = React.useRef({});
+
   return (
     <Layout>
     <Seo title="Home" />
     <div className="wrapper">
       <div className="mainContent">
         <Hero pageRefs={pageRefs} />
-        <AboutMe pageRefs={pageRefs} />
-        <Experience pageRefs={pageRefs} />
-        <ProjectSection pageRefs={pageRefs} />
+        <Fade triggerOnce={true} duration={1500} fraction={0.75}>
+          <AboutMe pageRefs={pageRefs} />
+        </Fade>
+        <Fade triggerOnce={true} fraction={0.5}>
+          <Experience pageRefs={pageRefs} />
+        </Fade>
+        <Fade triggerOnce={true} fraction={0.75}>
+          <ProjectSection pageRefs={pageRefs} />
+        </Fade>
       </div>
       <div className="sidebar">
         <Nav pageRefs={pageRefs}  />
