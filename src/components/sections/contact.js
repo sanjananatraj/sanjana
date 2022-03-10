@@ -1,6 +1,5 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 import { navigate } from 'gatsby-link'
 import * as styles from "../../styles/sections.module.scss"
 import globe from "../../images/icons8-globe-64.png"
@@ -59,21 +58,21 @@ const Contact = ({ pageRefs }) => {
             <label>
                Name:
                <br />
-               <input type="text" name="name" onChange={handleChange} />
+               <input type="text" name="name" onChange={handleChange} required />
             </label>
          </p>
          <p>
             <label>
                Email:
                <br />
-               <input type="email" name="email" onChange={handleChange} />
+               <input type="email" name="email" onChange={handleChange} required />
             </label>
          </p>
          <p>
             <label>
                Message:
                <br />
-               <textarea name="message" onChange={handleChange} />
+               <textarea name="message" onChange={handleChange} required />
             </label>
          </p>
          <p>
