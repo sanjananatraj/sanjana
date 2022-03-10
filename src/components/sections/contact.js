@@ -9,8 +9,8 @@ import globe from "../../images/icons8-globe-64.png"
 
 function encode(data) {
    return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
+   .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+   .join('&')
 }
 
 const Contact = ({ pageRefs }) => {
@@ -37,7 +37,7 @@ const Contact = ({ pageRefs }) => {
    return (
       <section className={styles.contact} id="#contact" ref={el => pageRefs.current = { ...pageRefs.current, contact: el}}>
          <h1><img src={globe} alt="blue globe"></img>{' '}Contact</h1>
-         <p>I&apos;m currently open to new opportunities in software engineering. You can either send me an email or use the
+         <p>I&apos;m currently open to new opportunities in software engineering. You can either <a href= "mailto:sanjananatraj319@gmail.com">send me an email</a> or use the
          form below to contact me. I&apos;ll try my best to respond as soon as possible!</p>
 
          <form
@@ -77,7 +77,7 @@ const Contact = ({ pageRefs }) => {
             </label>
          </p>
          <p>
-            <button type="submit">Send</button>
+            <button type="submit">Submit</button>
          </p>
       </form>   
       </section>
@@ -86,6 +86,6 @@ const Contact = ({ pageRefs }) => {
 
 Contact.propTypes = {
    pageRefs: PropTypes.object.isRequired
- }
+}
  
 export default Contact
