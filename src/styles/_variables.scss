@@ -1,19 +1,19 @@
 // global website styling
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
-$primary: #7c779e;;
+$primary: #bebee9;;
 $secondary: #6449da;
-$linkColor: #7736d3;
-$borderColor: #0f0f0f;
-$titleColor: #cabadf;
+$linkColor: #c9c5ee;
+$borderColor: #0b0824;
+$titleColor: #c6c2eb;
 $accent: #2E36AA;
-$background: #0f061d;
-$hoverColor: #50258b;
+$background: #161941;
+$hoverColor: #8f8abe;
 $blockquoteColor: #e3b35b;
-$scrollbarColor: #0f041d;
+$scrollbarColor: #0d0936;
 $subtitleColor: #ddd3ed;
 $maxWidth: 1000px;
-$fontColor: #b7adc4;
-$headerFooterColor: #0a0414;
+$fontColor: #d5d2ec;
+$headerFooterColor: #08061b;
 $fontFamily: -apple-system, BlinkMacSystemFont, 'Inter', Roboto, Oxygen,
 Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 $fontSans: 'Colfax', 'Inter', sans-serif;
@@ -51,7 +51,7 @@ $fontSans: 'Colfax', 'Inter', sans-serif;
   ::-webkit-scrollbar {
     width: 7px;
     height: 7px;
-    background: $headerFooterColor;
+    background: $background;
   }
 
   ::-webkit-scrollbar-thumb {

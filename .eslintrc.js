@@ -26,5 +26,14 @@ module.exports = {
         "fragment": "Fragment",  // Fragment to use (may be a property of <pragma>), default to "Fragment"
         "version": "detect", // React version. "detect" automatically picks the version you have installed.
       },
-    }
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "allowImportExportEverywhere": true,
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "parser": "@babel/eslint-parser",
 }

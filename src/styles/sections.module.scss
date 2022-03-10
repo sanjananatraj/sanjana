@@ -2,7 +2,7 @@
 @include variables.global;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-
+$heroTitle: #c3bee5;
 .hero {
   display: flex;
   justify-content: center;
@@ -18,7 +18,7 @@
 
   h2 {
     font-size: clamp(50px, 10vw, 100px);
-    color: #7c779e;
+    color: $heroTitle;
     line-height: 1;
     margin: 0;
     font-family: variables.$fontSans;
