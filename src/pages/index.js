@@ -7,6 +7,7 @@ import Hero from "../components/sections/hero"
 import AboutMe from "../components/sections/aboutme"
 import Experience from "../components/sections/experience"
 import ProjectSection from "../components/sections/projectsSection"
+import Contact from "../components/sections/contact";
 import Nav from "../components/nav"
 
 const IndexPage = () => {
@@ -27,6 +28,9 @@ const IndexPage = () => {
         </Fade>
         <Fade triggerOnce={true} fraction={0.75}>
           <ProjectSection pageRefs={pageRefs} />
+        </Fade>
+        <Fade triggerOnce={true} fraction={0.75}>
+          <Contact pageRefs={pageRefs} />
         </Fade>
       </div>
       <div className="sidebar">

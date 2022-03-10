@@ -14,6 +14,7 @@ const Nav = ({ pageRefs }) => {
         <li onClick={() => scrollIntoView('aboutme')}>About</li>
         <li onClick={() => scrollIntoView('experience')}>Experience</li>
         <li onClick={() => scrollIntoView('projectsSection')}>Projects</li>
+        <li onClick={() => scrollIntoView('contact')}>Contact</li>
       </ul>
     </div>
   )

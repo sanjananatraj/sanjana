@@ -5,7 +5,6 @@ $font: 'Roboto Mono', monospace;
 
 .header{
   background-color: variables.$headerFooterColor;
-  border-bottom: 1px solid variables.$borderColor;
   font-family: $font;
   color: variables.$fontColor;
   padding: 1rem;
@@ -40,12 +39,12 @@ $font: 'Roboto Mono', monospace;
 
 // title styling
 .headerTitle {
-  letter-spacing: 0rem;
+  letter-spacing: 0.1rem;
   max-width: variables.$maxWidth;
   margin-left: auto;
   margin-right: auto;
   color: variables.$fontColor !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-decoration: none;
   :hover {
     background-color: variables.$background;
@@ -56,9 +55,9 @@ $font: 'Roboto Mono', monospace;
 
 // override normal link styling for these nav links
 #headerLinks {
-  color: #6ebcd4;
+  color: variables.$subtitleColor;
   :hover {
-    color: #4598b1;
+    color: #9889b1;
     text-decoration: underline;
   }
 }

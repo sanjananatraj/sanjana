@@ -28,6 +28,7 @@
     margin-bottom: 10px;
     line-height: 1.1;
     font-size: clamp(15px, 5vw, 16px);
+    color: variables.$subtitleColor;
   }
 
   p {
@@ -99,5 +100,11 @@
   .exp {
     grid-template-columns: 1fr;
     grid-row-gap: 0px;
+  }
+}
+
+.contact {
+  form {
+    max-width: variables.$maxWidth;
   }
 }
