@@ -36,7 +36,7 @@ const Contact = ({ pageRefs }) => {
    return (
       <section className={styles.contact} id="#contact" ref={el => pageRefs.current = { ...pageRefs.current, contact: el}}>
          <h1><img src={globe} alt="blue globe"></img>{' '}Contact</h1>
-         <p>I&apos;m currently open to new opportunities in software engineering. You can either <a href= "mailto:sanjananatraj319@gmail.com">send me an email</a> or use the
+         <p>I&apos;m currently open to new opportunities in software engineering. You can either <a href="mailto:sanjananatraj319@gmail.com">send me an email</a> or use the
          form below to contact me. I&apos;ll try my best to respond as soon as possible!</p>
 
          <form
@@ -47,38 +47,38 @@ const Contact = ({ pageRefs }) => {
             data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
          >
-        {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-         <input type="hidden" name="form-name" value="contact" />
-         <p hidden>
+          {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
             <label>
-               Don’t fill this out: <input name="bot-field" onChange={handleChange} />
+              Don’t fill this out: <input name="bot-field" onChange={handleChange} />
             </label>
-         </p>
-         <p>
+          </p>
+          <p>
             <label>
-               Name:
-               <br />
-               <input type="text" name="name" onChange={handleChange} required />
+              Name:
+              <br />
+              <input type="text" name="name" onChange={handleChange} required />
             </label>
-         </p>
-         <p>
+          </p>
+          <p>
             <label>
-               Email:
-               <br />
-               <input type="email" name="email" onChange={handleChange} required />
+              Email:
+              <br />
+              <input type="email" name="email" onChange={handleChange} required />
             </label>
-         </p>
-         <p>
+          </p>
+          <p>
             <label>
-               Message:
-               <br />
-               <textarea name="message" onChange={handleChange} required />
+              Message:
+              <br />
+              <textarea name="message" onChange={handleChange} required />
             </label>
-         </p>
-         <p>
+          </p>
+          <p>
             <button type="submit">Submit</button>
-         </p>
-      </form>   
+          </p>
+        </form>   
       </section>
    )
 }

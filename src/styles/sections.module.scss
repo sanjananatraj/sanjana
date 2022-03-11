@@ -2,7 +2,8 @@
 @include variables.global;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-$heroTitle: #c3bee5;
+$heroTitle: #8ca9e7;
+
 .hero {
   display: flex;
   justify-content: center;
@@ -86,6 +87,7 @@ $heroTitle: #c3bee5;
   h5 {
     margin-top: 5px;
     font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
   }
 
   img {
@@ -119,18 +121,12 @@ $heroTitle: #c3bee5;
   }
   
   textarea {
-    height: 120px;
+    height: 140px;
     resize: none;
+    width: 75%;
   }
 
   button {
-    cursor: pointer;
-    font-family: 'Roboto Mono', monospace;
-    border: 3px solid variables.$accent;
-    border-radius: 8px;
-    padding: 10px;
-    background-color: variables.$background;
-    color: variables.$fontColor;
     width: 20%;
     height: 50px;
   }

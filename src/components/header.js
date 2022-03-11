@@ -12,31 +12,37 @@ const links = [
   { url: '/credits', label: 'credits', icon: moonAndStars }
 ]
 
-const Header = ({ siteTitle }) => (
-  <header className={styles.header}>
-    <div className={styles.headerContainer}>
-      <nav className={styles.headerNav}>
-        <Link to="/" className={styles.headerTitle}>
-          {siteTitle}
-        </Link>
-      </nav>
-      <div>
+const Header = ({ siteTitle }) => {
+  const [active, setActive] = React.useState()
+
+  return(
+    <header className={styles.header}>
+      <div className={styles.headerContainer}>
         <nav className={styles.headerNav}>
-          {links.map((link) => (
-              <a 
-                href={link.url}
+          <Link to="/" className={styles.headerTitle}>
+            {siteTitle}
+          </Link>
+        </nav>
+        <div>
+          <nav className={styles.headerNav}>
+            {links.map((link) => (
+              <Link 
+                to={link.url}
                 key={link.label}
                 id={styles.headerLinks}
-              >
-                <img src={link.icon} alt={link.label} title={link.label} />
+                onClick={() => setActive(link.label)}
+                activeClassName="is-active"
+                >
+                {/* <img src={link.icon} alt={link.label} title={link.label} /> */}
                 <i><span title={link.label}>{link.label}</span></i>
-              </a>
-          ))}
-        </nav>
+              </Link>
+            ))}
+          </nav>
+        </div>
       </div>
-    </div>
-  </header>
-)
+    </header>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

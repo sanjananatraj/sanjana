@@ -22,6 +22,7 @@ $font: 'Roboto Mono', monospace;
   font-size: 1.3rem;
   position: relative;
   z-index: 10;
+  padding-left: 1rem;
 }
 
 // flex items
@@ -51,13 +52,5 @@ $font: 'Roboto Mono', monospace;
     color: variables.$titleColor;
     text-decoration: none;
   }
-}
-
-// override normal link styling for these nav links
-#headerLinks {
-  color: variables.$subtitleColor;
-  :hover {
-    color: #9889b1;
-    text-decoration: underline;
-  }
+  background: none;
 }

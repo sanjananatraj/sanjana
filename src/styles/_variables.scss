@@ -2,14 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 $primary: #bebee9;;
 $secondary: #9f96f0;
-$linkColor: #c9c5ee;
+$linkColor: #d5d2ec;
 $borderColor: #0b0824;
 $titleColor: #c6c2eb;
 $accent: #2E36AA;
 $background: #161941;
-$hoverColor: #8f8abe;
+$hoverColor: #f568ae;
 $blockquoteColor: #e3b35b;
-$scrollbarColor: #0d0936;
+$scrollbarColor: #4038a1;
 $subtitleColor: #ddd3ed;
 $maxWidth: 1000px;
 $fontColor: #d5d2ec;
@@ -31,37 +31,78 @@ $fontSans: 'Colfax', 'Inter', sans-serif;
     -moz-osx-font-smoothing: grayscale;
     font-family: $fontFamily;
     color: $fontColor;
-    background-color: $background;
     overflow-x: hidden;
+    background: $background; // fallback for older browsers
+    background: -webkit-linear-gradient(45deg, #08061b, #0c0f3d, $background, #070b49);
+    background: linear-gradient(45deg, #08061b, #0c0f3d, $background, #070b49);
   }
 
   main {
-    min-height: calc(100vh - 270px);
+    min-height: calc(100vh - 288px);
   }
   
+  // gradient underlines from https://nickymeuleman.netlify.app/blog/css-animated-wrapping-underline
   a {
     color: $linkColor;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    background-image: 
+      linear-gradient(to right, $hoverColor, $hoverColor),
+      linear-gradient(to right, $hoverColor, rgb(240, 26, 222), rgb(58, 18, 240));
+    background-repeat: no-repeat;
+    border: none;
+    background-size: 100% 0.1em, 0 0.1em;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
   }
-  
+
   a:hover {
     color: $hoverColor;
   }
 
-  //scrollbar
+  a:hover,
+  a:focus {
+	  background-size: 0 0.1em, 100% 0.1em;
+  }
+
+  .is-active {
+    background: none;
+    :hover {
+      color: $hoverColor;
+      background: none !important;
+    }
+  }
+
+  // scrollbar
   ::-webkit-scrollbar {
-    width: 7px;
-    height: 7px;
+    width: 10px;
+    height: 10px;
     background: $background;
   }
 
   ::-webkit-scrollbar-thumb {
     background: $scrollbarColor;
-    border-radius: 0;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background:#5c4fcf;
   }
 
   p {
     line-height: 1.3;
   }
+
+  button {
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+    border: 3px solid $accent;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: $background;
+    color: $fontColor;
+  }
+  
 }
 
 @mixin headers {
@@ -73,5 +114,10 @@ $fontSans: 'Colfax', 'Inter', sans-serif;
   h2, h3, h4 {
     color: $subtitleColor;
     font-size: 1.5rem;
+  }
+
+  h5, h6 {
+    color: $subtitleColor;
+    font-size: 1.2rem;
   }
 }

@@ -28,6 +28,11 @@ $font: 'Roboto Mono', monospace;
     margin: 0 1rem;
   }
 
+  nav a {
+    text-decoration: none;
+    background: none;
+  }
+
   span {
     display: flex;
     align-items: center;
