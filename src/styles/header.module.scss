@@ -7,13 +7,14 @@ $font: 'Roboto Mono', monospace;
   background-color: variables.$headerFooterColor;
   font-family: $font;
   color: variables.$fontColor;
-  padding: 1rem;
+  padding: 1.5rem 0;
   width: 100%;
 }
 
 //flex parent container
 .headerContainer { 
   display: flex;
+  flex-direction: row;
   margin: 0 auto;
   align-items: center;
   height: 100%;
@@ -22,7 +23,7 @@ $font: 'Roboto Mono', monospace;
   font-size: 1.3rem;
   position: relative;
   z-index: 10;
-  padding-left: 1rem;
+  padding: 0 1rem;
 }
 
 // flex items
@@ -44,7 +45,7 @@ $font: 'Roboto Mono', monospace;
   max-width: variables.$maxWidth;
   margin-left: auto;
   margin-right: auto;
-  color: variables.$fontColor !important;
+  color: variables.$fontColor;
   font-size: 1.3rem;
   text-decoration: none;
   :hover {
@@ -54,3 +55,14 @@ $font: 'Roboto Mono', monospace;
   }
   background: none;
 }
+
+.headerLinks {
+  max-width: variables.$maxWidth;
+}
+
+@media screen and (max-width: 555px) {
+  .headerContainer { 
+    flex-direction: column;
+  }
+}
+

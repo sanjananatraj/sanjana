@@ -11,7 +11,7 @@ $hoverColor: #f568ae;
 $blockquoteColor: #e3b35b;
 $scrollbarColor: #4038a1;
 $subtitleColor: #ddd3ed;
-$maxWidth: 1000px;
+$maxWidth: 950px;
 $fontColor: #d5d2ec;
 $headerFooterColor: #08061b;
 $fontFamily: -apple-system, BlinkMacSystemFont, 'Inter', Roboto, Oxygen,
@@ -27,18 +27,14 @@ $fontSans: 'Colfax', 'Inter', sans-serif;
   @include headers;
   body {
     margin: 0;
+    box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: $fontFamily;
     color: $fontColor;
-    overflow-x: hidden;
     background: $background; // fallback for older browsers
     background: -webkit-linear-gradient(45deg, #08061b, #0c0f3d, $background, #070b49);
     background: linear-gradient(45deg, #08061b, #0c0f3d, $background, #070b49);
-  }
-
-  main {
-    min-height: calc(100vh - 288px);
   }
   
   // gradient underlines from https://nickymeuleman.netlify.app/blog/css-animated-wrapping-underline
@@ -108,7 +104,7 @@ $fontSans: 'Colfax', 'Inter', sans-serif;
 @mixin headers {
   h1 {
     color: $titleColor;
-    font-size: 2.5rem;
+    font-size: clamp(40px, 1.5vw, 2.5rem);
   }
 
   h2, h3, h4 {

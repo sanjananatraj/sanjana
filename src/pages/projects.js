@@ -4,8 +4,10 @@ import Seo from "../components/seo"
 
 const ProjectPage = () => (
   <Layout>
+    <div className="page">
     <Seo title="Projects" />
-    <h1>Projects</h1>
+      <h1>Projects</h1>
+    </div>
   </Layout>
 )
 

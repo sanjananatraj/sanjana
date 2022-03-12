@@ -23,13 +23,12 @@ const Header = ({ siteTitle }) => {
             {siteTitle}
           </Link>
         </nav>
-        <div>
+        <div className={styles.headerLinks}>
           <nav className={styles.headerNav}>
             {links.map((link) => (
               <Link 
                 to={link.url}
                 key={link.label}
-                id={styles.headerLinks}
                 onClick={() => setActive(link.label)}
                 activeClassName="is-active"
                 >
