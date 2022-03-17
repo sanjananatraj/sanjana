@@ -12,34 +12,29 @@ const links = [
   { url: '/credits', label: 'credits', icon: moonAndStars }
 ]
 
-const Header = ({ siteTitle }) => {
-  const [active, setActive] = React.useState()
-
-  return(
-    <header className={styles.header}>
-      <nav className={styles.parent}>
-        <div className={styles.logo}>
-          <Link to="/" className={styles.title}>
-            {siteTitle}
+const Header = ({ siteTitle }) => (
+  <header className={styles.header}>
+    <nav className={styles.parent}>
+      <div className={styles.logo}>
+        <Link to="/" className={styles.title}>
+          {siteTitle}
+        </Link>
+      </div>
+      <div className={styles.links}>
+        {links.map((link) => (
+          <Link 
+            to={link.url}
+            key={link.label}
+            activeClassName="is-active"
+            >
+            {/* <img src={link.icon} alt={link.label} title={link.label} /> */}
+            <i><span title={link.label}>{link.label}</span></i>
           </Link>
-        </div>
-        <div className={styles.links}>
-          {links.map((link) => (
-              <Link 
-                to={link.url}
-                key={link.label}
-                onClick={() => setActive(link.label)}
-                activeClassName="is-active"
-                >
-                {/* <img src={link.icon} alt={link.label} title={link.label} /> */}
-                <i><span title={link.label}>{link.label}</span></i>
-              </Link>
-            ))}
-        </div>
-      </nav>
-    </header>
-  )
-}
+          ))}
+      </div>
+    </nav>
+  </header>
+)
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

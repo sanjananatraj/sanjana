@@ -118,7 +118,7 @@ section {
 
   h5 {
     margin-top: 5px;
-    font-family: 'Roboto Mono', monospace;
+    font-family: variables.$fontMono;
     font-size: 0.9rem;
   }
 
@@ -144,7 +144,7 @@ section {
     width: 50%;
     padding: 0.5rem;
     border-radius: 4px;
-    font-family: 'Roboto Mono', monospace;
+    font-family: variables.$fontMono;
     margin-top: 5px;
   }
 

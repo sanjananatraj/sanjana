@@ -1,15 +1,16 @@
 import * as React from "react"
-import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { Fade } from "react-awesome-reveal"
+
+import Layout from "../components/layout"
+import Nav from "../components/nav"
+import Menu from "../components/menu"
 
 import Hero from "../components/sections/hero"
 import AboutMe from "../components/sections/aboutme"
 import Experience from "../components/sections/experience"
 import ProjectSection from "../components/sections/projectsSection"
 import Contact from "../components/sections/contact"
-import Nav from "../components/nav"
-import Menu from "../components/menu"
 
 const IndexPage = () => {
   //keep an array of section components for nav

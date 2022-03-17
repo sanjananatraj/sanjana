@@ -27,7 +27,8 @@ const Nav = (props) => {
 }
 
 Nav.propTypes = {
-  pageRefs: PropTypes.object.isRequired
+  pageRefs: PropTypes.object.isRequired,
+  setOpen: PropTypes.bool
 }
 
 export default Nav;

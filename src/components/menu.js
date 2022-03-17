@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react"
+import PropTypes from "prop-types"
 import "../styles/menu.scss"
 import Nav from "../components/nav"
 import Hamburger from 'hamburger-react'
@@ -6,6 +7,7 @@ import Hamburger from 'hamburger-react'
 const Menu = (props) => {
   const [isOpen, setOpen] = useState(false)
   const [style, setStyle] = useState('fullMenu menu-leave')
+  const pageRefs = props.pageRefs;
 
   const handleToggle = () => {
     setOpen(!isOpen)
@@ -27,8 +29,6 @@ const Menu = (props) => {
     }
   }
 
-  const pageRefs = props.pageRefs;
-
   useEffect(() => {
     window.addEventListener('resize', onResize);
     return () => {
@@ -46,6 +46,10 @@ const Menu = (props) => {
       </div>
     </>
   )
+}
+
+Menu.propTypes = {
+  pageRefs: PropTypes.object.isRequired
 }
 
 export default Menu

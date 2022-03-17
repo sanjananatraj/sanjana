@@ -16,6 +16,8 @@ $offset: $space;
 
 main {
   min-height: calc(100vh - 207px);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 // index page styling due to unique layout

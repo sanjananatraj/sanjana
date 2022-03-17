@@ -27,24 +27,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div className="container">
-        <main>
-        {/* <div id="menuToggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul id="menu">
-            <a href="#"><li>Home</li></a>
-            <a href="#"><li>About</li></a>
-            <a href="#"><li>Info</li></a>
-            <a href="#"><li>Contact</li></a>
-          </ul>
-        </div> */}
-        
-        {children}
-        
-        </main>
+      <div className="container shrink">
+        <main>{children}</main>
       </div>
       <Footer />
     </>
