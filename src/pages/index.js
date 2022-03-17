@@ -20,13 +20,10 @@ const IndexPage = () => {
       <main className="index">
         <aside>
           <div className="sidebar">
-            <div className="component">
-              <nav className="content">
-                <Nav pageRefs={pageRefs}  />
-              </nav>
-            </div>
+            <Nav pageRefs={pageRefs}  />
           </div>
         </aside>
+        
         <article className="article">
           <Hero pageRefs={pageRefs} />
           <Fade triggerOnce={true} duration={1500} fraction={0.75}>
@@ -42,6 +39,7 @@ const IndexPage = () => {
             <Contact pageRefs={pageRefs} />
           </Fade>
         </article>
+      
       </main>
     </Layout>
   )

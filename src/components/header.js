@@ -17,15 +17,14 @@ const Header = ({ siteTitle }) => {
 
   return(
     <header className={styles.header}>
-      <div className={styles.headerContainer}>
-        <nav className={styles.headerNav}>
-          <Link to="/" className={styles.headerTitle}>
+      <nav className={styles.parent}>
+        <div className={styles.logo}>
+          <Link to="/" className={styles.title}>
             {siteTitle}
           </Link>
-        </nav>
-        <div className={styles.headerLinks}>
-          <nav className={styles.headerNav}>
-            {links.map((link) => (
+        </div>
+        <div className={styles.links}>
+          {links.map((link) => (
               <Link 
                 to={link.url}
                 key={link.label}
@@ -36,9 +35,8 @@ const Header = ({ siteTitle }) => {
                 <i><span title={link.label}>{link.label}</span></i>
               </Link>
             ))}
-          </nav>
         </div>
-      </div>
+      </nav>
     </header>
   )
 }

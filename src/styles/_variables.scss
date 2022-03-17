@@ -1,17 +1,18 @@
 // global website styling
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
-$primary: #bebee9;;
-$secondary: #9f96f0;
-$linkColor: #d5d2ec;
+$primary: #afcef5;
+$secondary: #ff67b3;
+$linkColor: #e5d2ec;
 $borderColor: #0b0824;
-$titleColor: #c6c2eb;
+$titleColor: #e5e3fc;
+$subtitleColor: #d4d2f9;
 $accent: #2E36AA;
 $background: #161941;
 $hoverColor: #f568ae;
 $blockquoteColor: #e3b35b;
 $scrollbarColor: #4038a1;
-$subtitleColor: #ddd3ed;
-$maxWidth: 950px;
+$scrollbarHover: #5c4fcf;
+$maxWidth: 980px;
 $fontColor: #d5d2ec;
 $headerFooterColor: #08061b;
 $fontFamily: -apple-system, BlinkMacSystemFont, 'Inter', Roboto, Oxygen,
@@ -44,7 +45,7 @@ $fontSans: 'Colfax', 'Inter', sans-serif;
     text-decoration-skip-ink: auto;
     background-image: 
       linear-gradient(to right, $hoverColor, $hoverColor),
-      linear-gradient(to right, $hoverColor, rgb(240, 26, 222), rgb(58, 18, 240));
+      linear-gradient(to right, $hoverColor, #f01ade, #3a12f0);
     background-repeat: no-repeat;
     border: none;
     background-size: 100% 0.1em, 0 0.1em;
@@ -66,7 +67,7 @@ $fontSans: 'Colfax', 'Inter', sans-serif;
     background: none;
     :hover {
       color: $hoverColor;
-      background: none !important;
+      background: none;
     }
   }
 
@@ -81,8 +82,9 @@ $fontSans: 'Colfax', 'Inter', sans-serif;
     background: $scrollbarColor;
     border-radius: 4px;
   }
+  
   ::-webkit-scrollbar-thumb:hover {
-    background:#5c4fcf;
+    background: $scrollbarHover;
   }
 
   p {
@@ -94,11 +96,16 @@ $fontSans: 'Colfax', 'Inter', sans-serif;
     font-family: 'Roboto Mono', monospace;
     border: 3px solid $accent;
     border-radius: 8px;
-    padding: 10px;
+    padding: 0 20px;
     background-color: $background;
     color: $fontColor;
+    min-height: 50px;
   }
-  
+
+  button:hover {
+    background-color: #2d3169;
+  }
+
 }
 
 @mixin headers {
@@ -107,13 +114,43 @@ $fontSans: 'Colfax', 'Inter', sans-serif;
     font-size: clamp(40px, 1.5vw, 2.5rem);
   }
 
-  h2, h3, h4 {
+  h2 {
     color: $subtitleColor;
-    font-size: 1.5rem;
   }
 
-  h5, h6 {
-    color: $subtitleColor;
+  h3 {
+    color: #c9c6f8;
+  }
+
+  h4 {
+    color: #b3aff5;
+  }
+
+  h5 {
+    color:#a29ef3;
+  }
+
+  h6 {
+    color: #928cf1;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+  
+  h4 {
+    font-size: 1.6rem;
+  }
+  
+  h5 {
+    font-size: 1.4rem;
+  }
+
+  h6 {
     font-size: 1.2rem;
   }
 }

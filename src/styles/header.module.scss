@@ -8,45 +8,34 @@ $font: 'Roboto Mono', monospace;
   font-family: $font;
   color: variables.$fontColor;
   padding: 1.5rem 0;
-  width: 100%;
-}
-
-//flex parent container
-.headerContainer { 
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-  align-items: center;
-  height: 100%;
-  justify-content: space-between;
-  max-width: variables.$maxWidth;
-  font-size: 1.3rem;
-  position: relative;
   z-index: 10;
-  padding: 0 1rem;
+  position:relative;
 }
 
-// flex items
-.headerNav {
+// flex parent container
+.parent { 
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  padding: 0 3rem;
+  font-size: 1.3rem;
+}
+
+.logo {
+  display: flex;
   justify-content: center;
-  gap: 1rem;
-  img {
-    max-height: 30px;
-    width: auto;
-    float: left;
-  }
+  align-items: center;
 }
 
 // title styling
-.headerTitle {
+.title {
   letter-spacing: 0.1rem;
   max-width: variables.$maxWidth;
   margin-left: auto;
   margin-right: auto;
   color: variables.$fontColor;
-  font-size: 1.3rem;
   text-decoration: none;
   :hover {
     background-color: variables.$background;
@@ -56,13 +45,30 @@ $font: 'Roboto Mono', monospace;
   background: none;
 }
 
-.headerLinks {
+.links {
+  display: flex;
+  align-items: center;
   max-width: variables.$maxWidth;
+  gap: 1.5rem;
 }
 
-@media screen and (max-width: 555px) {
-  .headerContainer { 
+@media screen and (max-width: 625px) {
+  .parent { 
     flex-direction: column;
+  }
+  .links {
+    gap: 1rem;
   }
 }
 
+@media screen and (max-width: 305px){
+  .links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .title {
+    text-align: center;
+    padding-bottom: 0.3rem;
+  }
+}
