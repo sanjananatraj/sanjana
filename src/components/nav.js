@@ -3,14 +3,17 @@ import PropTypes from "prop-types"
 import "../styles/layout.scss"
 import { Fade } from "react-awesome-reveal"
 
-const Nav = ({ pageRefs }) => {
+const Nav = (props) => {
   function scrollIntoView(type) {
-    pageRefs.current[type].scrollIntoView({ behavior: "smooth" });
+    props.pageRefs.current[type].scrollIntoView({ behavior: "smooth" });
+    if(props.setOpen) {
+      props.setOpen(false)
+    }
   }
 
   return (
     <Fade direction="left" delay={300} triggerOnce>
-      <nav className="nav">
+      <nav className={props.class}>
         <ul>
           <li onClick={() => scrollIntoView('hero')}>Top</li>
           <li onClick={() => scrollIntoView('aboutme')}>Bio</li>

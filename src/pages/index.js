@@ -9,6 +9,7 @@ import Experience from "../components/sections/experience"
 import ProjectSection from "../components/sections/projectsSection"
 import Contact from "../components/sections/contact"
 import Nav from "../components/nav"
+import Menu from "../components/menu"
 
 const IndexPage = () => {
   //keep an array of section components for nav
@@ -19,8 +20,9 @@ const IndexPage = () => {
     <Seo title="Home" />
       <main className="index">
         <aside>
+          <Menu pageRefs={pageRefs} />
           <div className="sidebar">
-            <Nav pageRefs={pageRefs}  />
+            <Nav pageRefs={pageRefs} class="nav" />
           </div>
         </aside>
         

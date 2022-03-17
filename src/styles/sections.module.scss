@@ -62,9 +62,10 @@ section {
 
 @media screen and (max-width: 884px) {
   .hero {
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     padding-bottom: none;
     min-height: 70vh;
+    margin-top: -10rem;
   }
 }
 
@@ -77,8 +78,8 @@ section {
 .skills{
   display: grid;
   grid-template-columns: 150px 150px;
-  font-family: 'Roboto Mono', monospace;
   color: variables.$primary;
+  font-family: variables.$fontMono;
 
   ::marker {
     content: "♡ ";
@@ -100,6 +101,7 @@ section {
 .expChild {
   li {
     padding-bottom: 0.5rem;
+    font-family: variables.$fontFamily;
   }
 
   ul {

@@ -1,11 +1,9 @@
 @use 'variables';
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto+Mono:ital,wght@0,500;1,400&display=swap');
 @include variables.global;
-$font: 'Roboto Mono', monospace;
 
 .header{
   background-color: variables.$headerFooterColor;
-  font-family: $font;
+  font-family: variables.$fontMono;
   color: variables.$fontColor;
   padding: 1.5rem 0;
   z-index: 10;
