@@ -76,7 +76,7 @@ main {
   border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
 }
 
-@media screen and (max-width: 884px) {
+@media screen and (max-width: variables.$sidebarCollpaseWidth) {
   aside {
     padding-right: 1rem;
   }

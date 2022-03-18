@@ -5,7 +5,8 @@ module.exports = {
     author: {
       name: `Sanjana Natraj`,
     },
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    keywords: `sanjana, sanjana natraj, software, software engineering, personal, personal website, front end, website`,
+    siteUrl: `https://sanjananatraj.netlify.app`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -22,8 +23,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `SanjanaNatraj`,
+        short_name: `Sanjana Natraj`,
         start_url: `/`,
         background_color: `#663399`,
         // This will impact how browsers show your PWA/website

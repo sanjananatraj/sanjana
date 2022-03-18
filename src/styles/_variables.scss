@@ -14,6 +14,7 @@ $blockquoteColor: #e3b35b;
 $scrollbarColor: #4038a1;
 $scrollbarHover: #5c4fcf;
 $maxWidth: 980px;
+$sidebarCollpaseWidth: 884px;
 $fontColor: #d5d2ec;
 $headerFooterColor: #08061b;
 $fontFamily: -apple-system, BlinkMacSystemFont, 'Inter', Roboto, Oxygen,
@@ -96,7 +97,7 @@ $fontMono: 'Roboto Mono', 'monospace';
 
   button {
     cursor: pointer;
-    font-family: 'Roboto Mono', monospace;
+    font-family: $fontMono;
     border: 3px solid $accent;
     border-radius: 8px;
     padding: 0 20px;

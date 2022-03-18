@@ -57,6 +57,14 @@
   }
 }
 
+@media screen and (orientation: portrait) and (max-width: 300px){
+  .fullNav {
+    ul {
+      margin-top: 5rem;
+    }
+  }
+}
+
 .menu-enter {
   transform: translateX(0%);
   transition: transform 0.8s cubic-bezier(0.77,0.2,0.05,1.0);
@@ -67,7 +75,7 @@
   transition: transform 0.8s cubic-bezier(0.77,0.2,0.05,1.0);
 }
   
-@media screen and (max-width: 884px) {
+@media screen and (max-width: variables.$sidebarCollpaseWidth) {
   .ham {
     visibility: visible;
     opacity: 1;

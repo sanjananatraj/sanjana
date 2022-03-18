@@ -39,7 +39,7 @@ const Menu = (props) => {
   return(
     <>
       <div className="ham">
-        <Hamburger size={25} color="black" toggled={isOpen} toggle={handleToggle} direction="right" easing="ease-in" label="Show fullscreen menu"  />
+        <Hamburger size={25} color="#afcef5" toggled={isOpen} toggle={handleToggle} direction="right" easing="ease-in" label="Show fullscreen menu"  />
       </div>
       <div className={style}>
           <Nav pageRefs={pageRefs} class="fullNav" setOpen={setOpen} />

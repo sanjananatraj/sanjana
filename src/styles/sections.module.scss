@@ -62,17 +62,17 @@ section {
 
 @media screen and (max-width: 884px) {
   .hero {
-    padding-top: 0.5rem;
+    padding-top: 1rem;
     padding-bottom: none;
     min-height: 70vh;
-    margin-top: -10rem;
+    margin-top: -12rem;
   }
 }
 
-@media all and (orientation: landscape) {
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-width: 900px) {
   .hero {
-    padding-top: 6rem;
-  }
+    padding-top: 3rem;
+  }  
 }
 
 .skills{
