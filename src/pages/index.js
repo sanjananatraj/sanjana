@@ -35,7 +35,7 @@ const IndexPage = () => {
           <Fade triggerOnce={true} fraction={0.5}>
             <Experience pageRefs={pageRefs} />
           </Fade>
-          <Fade triggerOnce={true} fraction={0.75}>
+          <Fade triggerOnce={true} fraction={0.3}>
             <ProjectSection pageRefs={pageRefs} />
           </Fade>
           <Fade triggerOnce={true} fraction={0.75}>

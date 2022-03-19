@@ -9,9 +9,15 @@ section {
     max-width: 100%;
   }
   max-width: variables.$maxWidth;
-  margin: 0 auto; 
-  padding: 1rem 1.5rem 5rem;
+  margin: 0 auto 7rem; 
+  padding: 1rem;
+
+  h1 {
+    margin-bottom: 1.5rem;
+  }
 }
+
+// Hero section
 
 .hero {
   display: flex;
@@ -22,7 +28,7 @@ section {
   padding: 0 1.5rem;
   -webkit-box-align: center;
   -webkit-box-pack: center;
-  margin-top: -5rem;
+  margin: -10vh auto 0;
   position: static;
   z-index: 1;
 
@@ -75,6 +81,8 @@ section {
   }  
 }
 
+// About section
+
 .skills{
   display: grid;
   grid-template-columns: 150px 150px;
@@ -92,6 +100,8 @@ section {
   }
 }
 
+// Experience section
+
 .exp {
   display: grid;
   grid-template-columns: 35% 65%;
@@ -99,6 +109,8 @@ section {
 }
 
 .expChild {
+  margin-top: 0;
+  
   li {
     padding-bottom: 0.5rem;
     font-family: variables.$fontFamily;
@@ -126,8 +138,6 @@ section {
     max-height: 16px;
     padding: 2px;
   }
-
-  margin-top: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -136,6 +146,52 @@ section {
     grid-row-gap: 0px;
   }
 }
+
+// Projects Section
+.projectList {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(variables.$maxWidth / 4), 1fr));
+  grid-row-gap: 30px;
+  grid-column-gap: 15px;
+  grid-auto-rows: 1fr;
+}
+
+$boxColor: #171c49;
+.gradientBox {
+  background: 
+    linear-gradient($boxColor, $boxColor) padding-box,
+    linear-gradient(to left, #743ad5, #d53a9d) border-box;
+  border-radius: 10px;
+  border: 3px solid transparent;
+  padding: 1rem;
+
+  .content {
+    position: relative;
+  
+    .title {
+      padding: 0;
+      margin: 0;
+      margin-top: 7px;
+    }
+  
+    .techList {
+      font-family: variables.$fontMono;
+  
+      span {
+        padding: 5px;
+      }
+    }
+  }
+}
+
+.gradientBox:nth-child(even) {
+  background: 
+    linear-gradient($boxColor, $boxColor) padding-box,
+    linear-gradient(to right, #743ad5, variables.$primary) border-box;
+}
+
+// Contact section
 
 .contact {
   input, textarea {
