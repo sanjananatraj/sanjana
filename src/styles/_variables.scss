@@ -17,7 +17,7 @@ $headerFooterColor: #08061b;
 $blockquoteColor: #e3b35b;
 $borderColor: #0b0824;
 $hoverColor: #f568ae;
-$linkColor: #e5d2ec;
+$linkColor: #f1e1f6;
 $scrollbarColor: #4038a1;
 $scrollbarHover: #5c4fcf;
 
@@ -74,7 +74,7 @@ $fontMono: 'Roboto Mono', 'monospace';
   }
 
   a:hover, a:focus {
-	  background-size: 0 0.1em, 100% 0.1em;
+    background-size: 0 0.1em, 100% 0.1em;
   }
 
   .is-active {
