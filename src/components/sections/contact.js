@@ -72,7 +72,7 @@ const Contact = ({ pageRefs }) => {
             <label>
               Message:
               <br />
-              <textarea name="message" onChange={handleChange} required />
+              <textarea name="message" placeholder="Type your message here" onChange={handleChange} required />
             </label>
           </p>
           <p>

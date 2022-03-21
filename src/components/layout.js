@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div className="container shrink">
+      <div className="container">
         <main>{children}</main>
       </div>
       <Footer />

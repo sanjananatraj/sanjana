@@ -1,7 +1,7 @@
 @use 'variables';
 @include variables.global;
 
-.header{
+.header {
   background-color: variables.$headerFooterColor;
   font-family: variables.$fontMono;
   color: variables.$fontColor;

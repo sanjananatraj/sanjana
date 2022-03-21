@@ -14,7 +14,7 @@
 .fullMenu {
   visibility: hidden;
   opacity: 0;
-  background: linear-gradient(to left, #743ad5, #d53a9d);
+  background: variables.$gradient;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,6 +32,7 @@
   @extend .nav;
   border: none;
   padding: 0;
+  margin: 0 auto;
 
   ul {
     display: flex;
@@ -54,6 +55,23 @@
       flex-direction: row;
       gap: 1rem;
     }
+    li {
+      padding: 0.1rem;
+    }
+  }
+}
+
+@media screen and (max-height: 500px) and (max-width: 455px) {
+  .fullNav {
+    ul {
+      flex-direction: column;
+      gap: 0rem;
+      margin-top: 8rem;
+    }
+    
+    li {
+      padding: 0.1rem;
+    }
   }
 }
 
@@ -61,6 +79,22 @@
   .fullNav {
     ul {
       margin-top: 5rem;
+    }
+
+    li {
+      padding: 0.1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 305px){
+  .fullNav {
+    ul {
+      margin-top: 10rem;
+    }
+    
+    li {
+      padding: 0.1rem;
     }
   }
 }

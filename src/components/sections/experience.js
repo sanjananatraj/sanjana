@@ -23,19 +23,54 @@ const jobs = [
   ]}
 ]
 
+const extras = [
+  {'org': 'Society of Women Engineers', 'title': 'Secretary', 'descriptions': [
+    "Served as Secretary of SWE @ UCSC",
+    "Organized hackathons, local Santa Cruz community outreach, and events to encourage women in STEM fields",
+    "Provided mentoring, career, and resume advice to club members",
+    "Used MailChimp to send weekly emails about meeting updates"
+  ]},
+  {'org': 'AmeriCorps', 'title': 'Google Code Corps Volunteer', 'descriptions': [
+    "Guided students through CS First, a program that increases computer science exposure for young students", "Taught elementary school students fundamental programming concepts such as for loops and conditionals"
+  ]},
+  {'org': 'Google', 'title': 'Connect with Google Student Champion', 'descriptions': [
+    "Selected to lead the Connect with Google Slack community by increasing social engagement, share coding resources, and organizing spaces to build relationships and collaborate offline"
+  ]}
+]
+
 const Experience = ({ pageRefs }) => (
-  <section id='#experience' ref={el => {pageRefs.current = { ...pageRefs.current, experience: el}}}>
+  <section id={styles.experience} ref={el => {pageRefs.current = { ...pageRefs.current, experience: el}}}>
     <h1><img src={spring} alt="spring flower"></img>{' '}Experience</h1>
     <div className={styles.exp}>
       {jobs.map((job, index) => (
         <React.Fragment key={index}>
           <div className={styles.expChild}>
-            <h3>{job.company}</h3>
-            <h5>{job.title}</h5>
+            <h4>{job.company}</h4>
+            <h6>{job.title}</h6>
           </div>
 
           <ul className={styles.expChild}>
             {job.descriptions.map((desc, index) => (
+              <li key={index}>{desc}</li>
+            ))}
+          </ul>
+        </React.Fragment>
+      ))}
+    </div>
+
+    <hr></hr>
+    
+    <h2>Extras</h2>
+    <div className={styles.exp}>
+      {extras.map((extra, index) => (
+        <React.Fragment key={index}>
+          <div className={styles.expChild}>
+            <h4>{extra.org}</h4>
+            <h6>{extra.title}</h6>
+          </div>
+
+          <ul className={styles.expChild}>
+            {extra.descriptions.map((desc, index) => (
               <li key={index}>{desc}</li>
             ))}
           </ul>

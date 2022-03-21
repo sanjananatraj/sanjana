@@ -1,11 +1,9 @@
 @use 'variables';
 @include variables.global;
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 section {
   img {
-    max-height: 32px;
+    max-height: 30px;
     max-width: 100%;
   }
   max-width: variables.$maxWidth;
@@ -14,6 +12,7 @@ section {
 
   h1 {
     margin-bottom: 1.5rem;
+    font-size: clamp(2rem, 2.5vw, 3rem); 
   }
 }
 
@@ -71,13 +70,17 @@ section {
     padding-top: 1rem;
     padding-bottom: none;
     min-height: 70vh;
-    margin-top: -12rem;
+    margin-top: -10rem;
+  }
+
+  section {
+    margin: 0 auto 4rem; 
   }
 }
 
 @media (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-width: 900px) {
   .hero {
-    padding-top: 3rem;
+    padding-top: 0.5rem;
   }  
 }
 
@@ -102,20 +105,21 @@ section {
 
 // Experience section
 
+#experience {
+  hr {
+    margin: 2rem 0;
+  }
+}
+
 .exp {
   display: grid;
-  grid-template-columns: 35% 65%;
-  grid-row-gap: 50px;
+  grid-template-columns: 40% 60%;
+  grid-row-gap: 30px;
 }
 
 .expChild {
   margin-top: 0;
   
-  li {
-    padding-bottom: 0.5rem;
-    font-family: variables.$fontFamily;
-  }
-
   ul {
     margin: 0;
   }
@@ -124,11 +128,16 @@ section {
     content: "♡ ";
   }
 
-  h3 {
+  li {
+    padding-bottom: 0.5rem;
+    font-family: variables.$fontFamily;
+  }
+
+  h4 {
     margin: 0;
   }
 
-  h5 {
+  h6 {
     margin-top: 5px;
     font-family: variables.$fontMono;
     font-size: 0.9rem;
@@ -144,6 +153,12 @@ section {
   .exp {
     grid-template-columns: 1fr;
     grid-row-gap: 0px;
+  }
+
+  .expChild {
+    h6 {
+      margin: 10px 0;
+    }
   }
 }
 
@@ -161,7 +176,7 @@ $boxColor: #171c49;
 .gradientBox {
   background: 
     linear-gradient($boxColor, $boxColor) padding-box,
-    linear-gradient(to left, #743ad5, #d53a9d) border-box;
+    variables.$gradient border-box;
   border-radius: 10px;
   border: 3px solid transparent;
   padding: 1rem;
@@ -191,22 +206,31 @@ $boxColor: #171c49;
     linear-gradient(to right, #743ad5, variables.$primary) border-box;
 }
 
+@media screen and(max-width: 775px) {
+  .projectList {
+    grid-row-gap: 15px;
+  }
+
+}
+
 // Contact section
 
 .contact {
   input, textarea {
     background-color: #e2e2e7;
-    border: 2px solid variables.$borderColor;
+    border: 1px solid #999999;
+    border-radius: 8px;
     width: 50%;
     padding: 0.5rem;
-    border-radius: 4px;
     font-family: variables.$fontMono;
     margin-top: 5px;
   }
 
   input:focus, textarea:focus {
-    background-color: #ddefff;
-  }
+    box-shadow: 0 0 0 2px #ffffff,
+    0 0 0 5px variables.$tertiary;
+   outline: none;
+}
   
   textarea {
     height: 140px;

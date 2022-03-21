@@ -26,7 +26,7 @@ main {
   flex-wrap: wrap;
   gap: 2rem;
 
-  .article {
+  .content {
     flex-basis: 0;
     flex-grow: 999;
     min-width: 75%;
@@ -71,21 +71,23 @@ main {
   border: 4px solid;
   border-image-slice: 1;
   border-width: 2px;
-  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  border-image-source: variables.$gradient;
 }
 
 @media screen and (max-width: variables.$sidebarCollpaseWidth) {
-  aside {
-    padding-right: 1rem;
-  }
+  .index {
+    aside {
+      padding-right: 1rem;
+    }
 
-  .article {
-    padding-top: 0;
-  }
+    .content {
+      padding-top: 0;
+    }
 
-  .sidebar {
-    visibility: hidden;
-    padding-bottom: 0;
+    .sidebar {
+      visibility: hidden;
+      padding-bottom: 0;
+    }
   }
 }
 
