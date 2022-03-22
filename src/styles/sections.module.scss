@@ -17,7 +17,6 @@ section {
 }
 
 // Hero section
-
 .hero {
   display: flex;
   justify-content: center;
@@ -85,7 +84,6 @@ section {
 }
 
 // About section
-
 .skills{
   display: grid;
   grid-template-columns: 150px 150px;
@@ -104,7 +102,6 @@ section {
 }
 
 // Experience section
-
 #experience {
   hr {
     margin: 2rem 0;
@@ -173,34 +170,55 @@ section {
 }
 
 $boxColor: #171c49;
-.gradientBox {
+.projectItem {
   background: 
     linear-gradient($boxColor, $boxColor) padding-box,
     variables.$gradient border-box;
   border-radius: 10px;
   border: 3px solid transparent;
   padding: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+  .title {
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
 
-  .content {
-    position: relative;
-  
-    .title {
-      padding: 0;
-      margin: 0;
-      margin-top: 7px;
+    img {
+      height: 1em;
     }
-  
-    .techList {
+  }
+
+  .links {
+    display: flex;
+    align-items: flex-end;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+    padding-bottom: 5px;
+  }
+
+  .techList {
+    margin-top: auto;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    span {
       font-family: variables.$fontMono;
-  
-      span {
-        padding: 5px;
-      }
+      margin-right: 10px;
+    }
+    span:hover {
+      color: variables.$hoverColor;
     }
   }
 }
 
-.gradientBox:nth-child(even) {
+.projectItem:nth-child(even) {
   background: 
     linear-gradient($boxColor, $boxColor) padding-box,
     linear-gradient(to right, #743ad5, variables.$primary) border-box;
@@ -210,12 +228,11 @@ $boxColor: #171c49;
   .projectList {
     grid-row-gap: 15px;
   }
-
 }
 
 // Contact section
-
 .contact {
+  margin-bottom: 1rem;
   input, textarea {
     background-color: #e2e2e7;
     border: 1px solid #999999;
