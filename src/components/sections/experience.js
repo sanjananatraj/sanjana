@@ -24,8 +24,8 @@ const jobs = [
 ]
 
 const extras = [
-  {'org': 'Society of Women Engineers', 'title': 'Secretary', 'descriptions': [
-    "Served as Secretary of SWE @ UCSC",
+  {'org': 'SWE', 'title': 'Secretary', 'descriptions': [
+    "Served as Secretary of Society of Women Engineers @ UCSC",
     "Organized hackathons, local Santa Cruz community outreach, and events to encourage women in STEM fields",
     "Provided mentoring, career, and resume advice to club members",
     "Used MailChimp to send weekly emails about meeting updates"
