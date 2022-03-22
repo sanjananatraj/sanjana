@@ -186,9 +186,12 @@ $boxColor: #171c49;
     padding: 0;
     margin: 0;
     margin-top: 5px;
+    display: flex;
+    align-items: center;
 
     img {
       height: 1em;
+      margin-right: 5px;
     }
   }
 
