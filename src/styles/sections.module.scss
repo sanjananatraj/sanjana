@@ -261,5 +261,12 @@ $boxColor: #171c49;
   button {
     width: fit-content;
   }
+}
 
+@media screen and (max-width: 537px) {
+  .contact {
+    input, textarea {
+      width: 100%;
+    }
+  }
 }

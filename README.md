@@ -20,3 +20,37 @@ This project is sourced under the [MIT License](https://opensource.org/licenses/
 - Prettier
 - Webpack
 - Babel
+
+## Project Structure 
+📦src
+ ┣ 📂components
+ ┃ ┣ 📂sections
+ ┃ ┃ ┣ 📜aboutme.js
+ ┃ ┃ ┣ 📜contact.js
+ ┃ ┃ ┣ 📜experience.js
+ ┃ ┃ ┣ 📜hero.js
+ ┃ ┃ ┗ 📜projectsSection.js
+ ┃ ┣ 📜footer.js
+ ┃ ┣ 📜header.js
+ ┃ ┣ 📜layout.js
+ ┃ ┣ 📜menu.js
+ ┃ ┣ 📜nav.js
+ ┃ ┗ 📜seo.js
+ ┃ 📂fonts
+ ┃ 📂images
+ ┃ ┣ 📂project-icons
+ ┣ 📂pages
+ ┃ ┣ 📜404.js
+ ┃ ┣ 📜about.mdx
+ ┃ ┣ 📜credits.js
+ ┃ ┣ 📜index.js
+ ┃ ┣ 📜projects.js
+ ┃ ┗ 📜thanks.js
+ ┣ 📂styles
+ ┃ ┣ 📜footer.module.scss
+ ┃ ┣ 📜header.module.scss
+ ┃ ┣ 📜layout.scss
+ ┃ ┣ 📜menu.scss
+ ┃ ┣ 📜sections.module.scss
+ ┃ ┗ 📜_variables.scss
+ ┗ 📜html.js
