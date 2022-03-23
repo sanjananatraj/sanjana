@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as styles from "../../styles/sections.module.scss"
 import sun from "../../images/icons8-sun-128.png"
 
-const ProjectSection = ({ pageRefs }) => {
+const Project = ({ pageRefs }) => {
   const data = useStaticQuery(graphql`
     query {
       allMdx(sort: {fields: frontmatter___order, order: ASC}) {
@@ -30,13 +30,13 @@ const ProjectSection = ({ pageRefs }) => {
   `)
 
   return(
-    <section id='#projectsSection' ref={el => pageRefs.current = { ...pageRefs.current, projectsSection: el}}>
+    <section id="project" ref={el => pageRefs.current = { ...pageRefs.current, project: el}}>
       <h1><img src={sun} alt="sun"></img>{' '}Projects</h1>
       ➡️<Link to='/projects'>View more details about my projects</Link>
 
       <div className={styles.projectList}>
-        {data.allMdx.nodes.map((node) => (
-          <div className={styles.projectItem} key={node.order}>
+        {data.allMdx.nodes.map((node, index) => (
+          <div className={styles.projectItem} key={index}>
               <h6 className={styles.title}>
                 <GatsbyImage image={getImage(node.frontmatter.image)} alt={node.frontmatter.image_alt} />
                 {node.frontmatter.title}
@@ -66,8 +66,8 @@ const ProjectSection = ({ pageRefs }) => {
   )
 }
 
-ProjectSection.propTypes = {
+Project.propTypes = {
   pageRefs: PropTypes.object.isRequired
 }
 
-export default ProjectSection
+export default Project

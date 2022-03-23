@@ -9,7 +9,7 @@ import Menu from "../components/menu"
 import Hero from "../components/sections/hero"
 import AboutMe from "../components/sections/aboutme"
 import Experience from "../components/sections/experience"
-import ProjectSection from "../components/sections/projectsSection"
+import Project from "../components/sections/project"
 import Contact from "../components/sections/contact"
 
 const IndexPage = () => {
@@ -36,7 +36,7 @@ const IndexPage = () => {
             <Experience pageRefs={pageRefs} />
           </Fade>
           <Fade triggerOnce={true}>
-            <ProjectSection pageRefs={pageRefs} />
+            <Project pageRefs={pageRefs} />
           </Fade>
           <Fade triggerOnce={true} fraction={0.3}>
             <Contact pageRefs={pageRefs} />

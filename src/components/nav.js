@@ -18,7 +18,7 @@ const Nav = (props) => {
           <li onClick={() => scrollIntoView('hero')}>Top</li>
           <li onClick={() => scrollIntoView('aboutme')}>Bio</li>
           <li onClick={() => scrollIntoView('experience')}>Experience</li>
-          <li onClick={() => scrollIntoView('projectsSection')}>Projects</li>
+          <li onClick={() => scrollIntoView('project')}>Projects</li>
           <li onClick={() => scrollIntoView('contact')}>Contact</li>
         </ul>
       </nav>
@@ -27,8 +27,7 @@ const Nav = (props) => {
 }
 
 Nav.propTypes = {
-  pageRefs: PropTypes.object.isRequired,
-  setOpen: PropTypes.bool
+  pageRefs: PropTypes.object.isRequired
 }
 
 export default Nav;

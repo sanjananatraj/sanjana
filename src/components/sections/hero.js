@@ -5,7 +5,7 @@ import { AttentionSeeker } from "react-awesome-reveal";
 import * as styles from "../../styles/sections.module.scss"
 
 const Hero = ({ pageRefs }) => (
-  <section className={styles.hero} id='#hero' ref={el => {pageRefs.current = { ...pageRefs.current, hero: el}}}>
+  <section className={styles.hero} id="hero" ref={el => {pageRefs.current = { ...pageRefs.current, hero: el}}}>
     <AttentionSeeker effect="pulse" triggerOnce>
     <h3>👋 Hi there! I&apos;m</h3>
     <h2>Sanjana Natraj.</h2>

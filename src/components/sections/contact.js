@@ -34,7 +34,7 @@ const Contact = ({ pageRefs }) => {
          .catch((error) => alert(error))
    }
    return (
-      <section className={styles.contact} id="#contact" ref={el => pageRefs.current = { ...pageRefs.current, contact: el}}>
+      <section className={styles.contact} id="contact" ref={el => pageRefs.current = { ...pageRefs.current, contact: el}}>
          <h1><img src={globe} alt="blue globe"></img>{' '}Contact</h1>
          <p>I&apos;m currently open to new opportunities in software engineering. I'm based in the Bay Area, but I'm willing to relocate/work remotely. You can either <a href="mailto:sanjana.natraj319@gmail.com">send me an email</a> or use the
          form below to contact me. I&apos;ll try my best to respond as soon as possible!</p>

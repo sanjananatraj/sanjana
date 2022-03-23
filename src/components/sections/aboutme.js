@@ -8,14 +8,14 @@ const AboutMe = ({ pageRefs }) => {
   const skills = ['React', 'ES6 JavaScript', 'GraphQL', 'Node.js', 'Flask', 'Python']  
   
   return(
-      <section id='#aboutme' ref={el => pageRefs.current = { ...pageRefs.current, aboutme: el}}>
+      <section id="aboutme" ref={el => pageRefs.current = { ...pageRefs.current, aboutme: el}}>
         <h1><img src={night} alt="cloud and a moon"></img>{' '}About me</h1>
         
         <p>Hello! My name is Sanjana, and I 💗 building beautiful websites, interfaces, and apps. I particularly love all things web development and front-facing software. Based in the Bay Area, my interest in coding started when I was in high school, as I was surrounded by all sorts of people in tech. I particularly liked creating and designing websites with HTML, CSS and JavaScript. I then joined my local Girls Who Code club, which accelerated my interest in coding.</p>
 
         <p>While my main interests lie in front end development, I also have a bit of experience in backend technology, such as utilizing Flask and MySQL to build <a target="_blank" rel="noreferrer" href="https://thirdwavecoffeebase.com/">my own RESTful API</a>. Some of my favorite courses in college were about databases, machine learning, NLP, and data visualization.</p>
         
-        <p>Now with my Bachelor&apos;s degree in computer science from UCSC, I&apos;m currently seeking out new opportunities for front end/full stack software engineering positions! Reach out to me by <a href="mailto:sanjana.natraj319@gmail.com">sending me an email</a> or by using the contact form below. I'm also available on <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/sanjana-natraj/">LinkedIn</a>.</p>
+        <p>Now with my Bachelor&apos;s degree in computer science from UCSC, I&apos;m currently seeking out new opportunities for front end/full stack software engineering positions! Reach out to me by <a href="mailto:sanjana.natraj319@gmail.com">sending me an email</a> or by using the <a href="#contact">contact form below</a>. I'm also available on <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/sanjana-natraj/">LinkedIn</a>.</p>
         
         <p>Here are a couple of technologies I&apos;ve been using:</p>
         

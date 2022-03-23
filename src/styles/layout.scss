@@ -12,6 +12,14 @@ $offset: $space;
   margin: 0 auto;
   max-width: variables.$maxWidth;
   padding: 0.5rem 1rem 3rem;
+
+   ul {
+    list-style-type: circle;
+  }
+
+  li {
+    margin-block: 0.5em;
+  }
 }
 
 main {
