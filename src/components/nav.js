@@ -5,7 +5,7 @@ import { Fade } from "react-awesome-reveal"
 
 const Nav = (props) => {
   function scrollIntoView(type) {
-    props.pageRefs.current[type].scrollIntoView({ behavior: "smooth" });
+    props.pageRefs.current[type].scrollIntoView({ behavior: "smooth" })
     if(props.setOpen) {
       props.setOpen(false)
     }

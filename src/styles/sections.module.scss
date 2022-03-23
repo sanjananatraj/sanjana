@@ -138,6 +138,7 @@ section {
     margin-top: 5px;
     font-family: variables.$fontMono;
     font-size: 0.9rem;
+    font-weight: 400;
   }
 
   img {
@@ -191,7 +192,6 @@ $boxColor: #171c49;
 
     img {
       height: 1em;
-      margin-right: 5px;
     }
   }
 
@@ -216,7 +216,7 @@ $boxColor: #171c49;
       margin-right: 10px;
     }
     span:hover {
-      color: variables.$hoverColor;
+      background-color: variables.$accent;
     }
   }
 }

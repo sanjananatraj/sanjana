@@ -41,6 +41,9 @@ $fontMono: 'Roboto Mono', 'monospace';
 
 @mixin global {
   @include headers;
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     margin: 0;
     box-sizing: border-box;

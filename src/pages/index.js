@@ -14,7 +14,7 @@ import Contact from "../components/sections/contact"
 
 const IndexPage = () => {
   //keep an array of section components for nav
-  const pageRefs = React.useRef({});
+  const pageRefs = React.useRef({})
 
   return (
     <Layout>

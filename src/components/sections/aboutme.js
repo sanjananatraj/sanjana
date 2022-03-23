@@ -1,6 +1,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { navigate, Link } from "gatsby"
+import { Link } from "gatsby"
 import * as styles from "../../styles/sections.module.scss"
 import night from "../../images/icons8-night-100.png"
 
@@ -15,7 +15,7 @@ const AboutMe = ({ pageRefs }) => {
 
         <p>While my main interests lie in front end development, I also have a bit of experience in backend technology, such as utilizing Flask and MySQL to build <a target="_blank" rel="noreferrer" href="https://thirdwavecoffeebase.com/">my own RESTful API</a>. Some of my favorite courses in college were about databases, machine learning, NLP, and data visualization.</p>
         
-        <p>Now with my Bachelor&apos;s degree in computer science from UCSC, I&apos;m currently seeking out new opportunities for front end/full stack software engineering positions! Reach out to me by <a href="mailto:sanjananatraj319@gmail.com">sending me an email</a> or by using the contact form below. I'm also available on <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/sanjana-natraj/">LinkedIn</a>.</p>
+        <p>Now with my Bachelor&apos;s degree in computer science from UCSC, I&apos;m currently seeking out new opportunities for front end/full stack software engineering positions! Reach out to me by <a href="mailto:sanjana.natraj319@gmail.com">sending me an email</a> or by using the contact form below. I'm also available on <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/sanjana-natraj/">LinkedIn</a>.</p>
         
         <p>Here are a couple of technologies I&apos;ve been using:</p>
         

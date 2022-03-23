@@ -7,7 +7,7 @@ import Hamburger from 'hamburger-react'
 const Menu = (props) => {
   const [isOpen, setOpen] = useState(false)
   const [style, setStyle] = useState('fullMenu menu-leave')
-  const pageRefs = props.pageRefs;
+  const pageRefs = props.pageRefs
 
   const handleToggle = () => {
     setOpen(!isOpen)
@@ -16,10 +16,10 @@ const Menu = (props) => {
   useEffect(() => {
     if(isOpen) {
       setStyle('fullMenu menu-enter')
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden'
     } else {
       setStyle('fullMenu menu-leave')
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = 'unset'
     }
   }, [isOpen])
 
