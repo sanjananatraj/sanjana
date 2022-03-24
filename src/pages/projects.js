@@ -11,6 +11,8 @@ const ProjectPage = ({ data }) => (
       <h1>Projects</h1>
       <p>This page is to go in a bit more depth about some of the projects I&apos;ve built. I&apos;ll be describing my thought process, some hurdles I encountered when building, and what I loved about each project!</p>
 
+      <p>Note: this page is still under construction.</p>
+
       <h2>Table of Contents</h2>
       <ul>
         {data.allMdx.nodes.map((node) => (
@@ -28,17 +30,17 @@ const ProjectPage = ({ data }) => (
 )
 
 export const query = graphql`
-  query {
-    allMdx(sort: {order: ASC, fields: frontmatter___order}) {
+  query  {
+    allMdx(sort: {fields: frontmatter___order, order: ASC}) {
       nodes {
+        body
         frontmatter {
           title
         }
         slug
-        body
       }
     }
   }
-  `
+`
 
 export default ProjectPage

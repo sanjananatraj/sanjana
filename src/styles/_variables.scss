@@ -122,6 +122,21 @@ $fontMono: 'Roboto Mono', 'monospace';
   button:hover {
     background-color: #2d3169;
   }
+
+  ul {
+    list-style-type: circle;
+  }
+
+  code {
+    font-size: 18px;
+    margin: 0 auto;
+  }
+
+  pre {
+    background-color: #212450;
+    width: 100%;
+    padding: 1rem;
+  }
 }
 
 @mixin headers {

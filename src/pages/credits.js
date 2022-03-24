@@ -7,6 +7,7 @@ const CreditPage = () => (
     <div className="page">
     <Seo title="Credits" />
       <h1>Credits and attribution</h1>
+      <p>This page is under construction.</p>
     </div>
   </Layout>
 )

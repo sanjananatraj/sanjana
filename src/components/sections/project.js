@@ -8,21 +8,21 @@ import sun from "../../images/icons8-sun-128.png"
 const Project = ({ pageRefs }) => {
   const data = useStaticQuery(graphql`
     query {
-      allMdx(sort: {fields: frontmatter___order, order: ASC}) {
+      allMdx(sort: {order: ASC, fields: frontmatter___order}) {
         nodes {
           frontmatter {
             external
             github
-            summary
-            stack
-            title
-            order
             image {
               childImageSharp {
                 gatsbyImageData
               }
             }
             image_alt
+            order
+            stack
+            summary
+            title
           }
         }
       }
