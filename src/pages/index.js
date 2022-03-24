@@ -13,7 +13,7 @@ import Project from "../components/sections/project"
 import Contact from "../components/sections/contact"
 
 const IndexPage = () => {
-  //keep an array of section components for nav
+  // keep an array of section components for nav
   const pageRefs = React.useRef({})
 
   return (
