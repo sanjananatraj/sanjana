@@ -7,7 +7,7 @@ $accent: #2E36AA;
 $primary: #afcef5;
 $secondary: #ff67b3;
 $tertiary: #743ad5;
-$gradient: linear-gradient(to left, #743ad5, #d53a9d);
+$gradient: linear-gradient(to left, $tertiary, #d53a9d);
 
 // backgrounds
 $background: #161941;
@@ -41,11 +41,7 @@ $fontMono: 'Roboto Mono', 'monospace';
 
 @mixin global {
   @include headers;
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
+    
   body {
     margin: 0;
     box-sizing: border-box;
@@ -143,6 +139,10 @@ $fontMono: 'Roboto Mono', 'monospace';
 }
 
 @mixin headers {
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0.5rem 0;
+  }
+
   h1 {
     color: $titleColor;
     font-size: clamp(40px, 1.5vw, 2.5rem);
