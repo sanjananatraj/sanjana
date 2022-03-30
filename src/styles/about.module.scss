@@ -1,4 +1,4 @@
-@use 'variables';
+@use "variables";
 @include variables.global;
 
 .about {
@@ -7,18 +7,14 @@
   gap: 2rem;
 
   img {
-    background: 
-    linear-gradient(variables.$background, variables.$background) padding-box,
-    variables.$gradient border-box;
+    background: linear-gradient(variables.$background, variables.$background) padding-box,
+      variables.$gradient border-box;
     border-radius: 10px;
     border: 4px solid transparent;
-    // float: right;
-    // margin: 0 2rem 1rem;
   }
 }
 
-.skills {
-
+.about .skills {
   img {
     max-height: 64px;
     border: none;
@@ -27,15 +23,13 @@
   span {
     margin-right: 5px;
   }
-
 }
 
 .aboutContent {
-
   ul {
     list-style-type: none;
   }
-  
+
   li {
     font-size: 1.1rem;
   }
@@ -54,7 +48,6 @@
   .aboutContent {
     order: 2;
   }
-  
 }
 
 @media screen and (max-width: 400px) {

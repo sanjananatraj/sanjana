@@ -1,4 +1,4 @@
-@use 'variables';
+@use "variables";
 @include variables.global;
 
 .header {
@@ -7,11 +7,11 @@
   color: variables.$fontColor;
   padding: 1.5rem 0;
   z-index: 10;
-  position:relative;
+  position: relative;
 }
 
 // flex parent container
-.parent { 
+.parent {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -51,7 +51,7 @@
 }
 
 @media screen and (max-width: 625px) {
-  .parent { 
+  .parent {
     flex-direction: column;
   }
   .links {
@@ -59,7 +59,7 @@
   }
 }
 
-@media screen and (max-width: 305px){
+@media screen and (max-width: 305px) {
   .links {
     flex-direction: column;
     gap: 0.5rem;

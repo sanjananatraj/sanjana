@@ -18,7 +18,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-    <Seo title="Home" />
+      <Seo title="Home" />
       <div className="index">
         <aside>
           <Menu pageRefs={pageRefs} />
@@ -26,7 +26,7 @@ const IndexPage = () => {
             <Nav pageRefs={pageRefs} class="nav" />
           </div>
         </aside>
-        
+
         <article className="content">
           <Hero pageRefs={pageRefs} />
           <Fade triggerOnce={true} duration={1500} fraction={0.45}>
@@ -42,7 +42,6 @@ const IndexPage = () => {
             <Contact pageRefs={pageRefs} />
           </Fade>
         </article>
-      
       </div>
     </Layout>
   )

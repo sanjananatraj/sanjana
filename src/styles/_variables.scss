@@ -1,9 +1,9 @@
 // global website styling
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,400;0,500;1,200;1,400;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,400;0,500;1,200;1,400;1,500&display=swap");
 
 // base colors
-$accent: #2E36AA;
+$accent: #2e36aa;
 $primary: #afcef5;
 $secondary: #ff67b3;
 $tertiary: #743ad5;
@@ -29,19 +29,19 @@ $sidebarCollpaseWidth: 884px;
 $titleColor: #e5e3fc;
 $subtitleColor: #d4d2f9;
 $fontColor: #d5d2ec;
-$fontFamily: -apple-system, BlinkMacSystemFont, 'Inter', Roboto, Oxygen,
-Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-$fontSans: 'Colfax', 'Inter', sans-serif;
-$fontMono: 'Roboto Mono', 'monospace';
+$fontFamily: -apple-system, BlinkMacSystemFont, "Inter", Roboto, Oxygen, Ubuntu, Cantarell,
+  Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+$fontSans: "Colfax", "Inter", sans-serif;
+$fontMono: "Roboto Mono", "monospace";
 
 @font-face {
-  font-family: 'Colfax';
+  font-family: "Colfax";
   src: url("../fonts/Colfax-Regular.otf") format("opentype");
 }
 
 @mixin global {
   @include headers;
-    
+
   body {
     margin: 0;
     box-sizing: border-box;
@@ -59,8 +59,7 @@ $fontMono: 'Roboto Mono', 'monospace';
     color: $linkColor;
     text-decoration: none;
     text-decoration-skip-ink: auto;
-    background-image: 
-      linear-gradient(to right, $hoverColor, $hoverColor),
+    background-image: linear-gradient(to right, $hoverColor, $hoverColor),
       linear-gradient(to right, $hoverColor, #f01ade, #3a12f0);
     background-repeat: no-repeat;
     border: none;
@@ -75,7 +74,8 @@ $fontMono: 'Roboto Mono', 'monospace';
     cursor: pointer;
   }
 
-  a:hover, a:focus {
+  a:hover,
+  a:focus {
     background-size: 0 0.1em, 100% 0.1em;
   }
 
@@ -98,7 +98,7 @@ $fontMono: 'Roboto Mono', 'monospace';
     background: $scrollbarColor;
     border-radius: 4px;
   }
-  
+
   ::-webkit-scrollbar-thumb:hover {
     background: $scrollbarHover;
   }
@@ -139,7 +139,12 @@ $fontMono: 'Roboto Mono', 'monospace';
 }
 
 @mixin headers {
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin: 0.5rem 0;
   }
 
@@ -161,7 +166,7 @@ $fontMono: 'Roboto Mono', 'monospace';
   }
 
   h5 {
-    color:#a29ef3;
+    color: #a29ef3;
   }
 
   h6 {
@@ -175,11 +180,11 @@ $fontMono: 'Roboto Mono', 'monospace';
   h3 {
     font-size: 1.8rem;
   }
-  
+
   h4 {
     font-size: 1.6rem;
   }
-  
+
   h5 {
     font-size: 1.4rem;
   }

@@ -10,7 +10,7 @@ const NotFoundPage = () => (
     <div className="page">
       <h1>404: Not Found</h1>
       <p>Oh no! You just hit a route that doesn&#39;t exist... the sadness.</p>
-      <Link to='/'>Go back home</Link>
+      <Link to="/">Go back home</Link>
     </div>
   </Layout>
 )

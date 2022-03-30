@@ -6,7 +6,7 @@ import { Fade } from "react-awesome-reveal"
 const Nav = (props) => {
   function scrollIntoView(type) {
     props.pageRefs.current[type].scrollIntoView({ behavior: "smooth" })
-    if(props.setOpen) {
+    if (props.setOpen) {
       props.setOpen(false)
     }
   }
@@ -15,11 +15,11 @@ const Nav = (props) => {
     <Fade direction="left" delay={300} triggerOnce>
       <nav className={props.class}>
         <ul>
-          <li onClick={() => scrollIntoView('hero')}>Top</li>
-          <li onClick={() => scrollIntoView('aboutme')}>Bio</li>
-          <li onClick={() => scrollIntoView('experience')}>Experience</li>
-          <li onClick={() => scrollIntoView('project')}>Projects</li>
-          <li onClick={() => scrollIntoView('contact')}>Contact</li>
+          <li onClick={() => scrollIntoView("hero")}>Top</li>
+          <li onClick={() => scrollIntoView("aboutme")}>Bio</li>
+          <li onClick={() => scrollIntoView("experience")}>Experience</li>
+          <li onClick={() => scrollIntoView("project")}>Projects</li>
+          <li onClick={() => scrollIntoView("contact")}>Contact</li>
         </ul>
       </nav>
     </Fade>
@@ -27,7 +27,7 @@ const Nav = (props) => {
 }
 
 Nav.propTypes = {
-  pageRefs: PropTypes.object.isRequired
+  pageRefs: PropTypes.object.isRequired,
 }
 
-export default Nav;
+export default Nav

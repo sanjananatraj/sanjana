@@ -1,4 +1,4 @@
-@use 'variables';
+@use "variables";
 @include variables.global;
 
 section {
@@ -7,12 +7,12 @@ section {
     max-width: 100%;
   }
   max-width: variables.$maxWidth;
-  margin: 0 auto 7rem; 
+  margin: 0 auto 7rem;
   padding: 1rem;
 
   h1 {
     margin-bottom: 1.5rem;
-    font-size: clamp(2rem, 2.5vw, 3rem); 
+    font-size: clamp(2rem, 2.5vw, 3rem);
   }
 }
 
@@ -56,12 +56,12 @@ section {
 
   @keyframes fadeInAnimation {
     0% {
-        opacity: 0;
+      opacity: 0;
     }
     100% {
-        opacity: 1;
-     }
-  } 
+      opacity: 1;
+    }
+  }
 }
 
 @media screen and (max-width: 884px) {
@@ -73,18 +73,18 @@ section {
   }
 
   section {
-    margin: 0 auto 4rem; 
+    margin: 0 auto 4rem;
   }
 }
 
 @media (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-width: 900px) {
   .hero {
     padding-top: 0.5rem;
-  }  
+  }
 }
 
 // About section
-.skills{
+.skills {
   display: grid;
   grid-template-columns: 150px 150px;
   color: variables.$primary;
@@ -116,7 +116,7 @@ section {
 
 .expChild {
   margin-top: 0;
-  
+
   ul {
     margin: 0;
   }
@@ -172,9 +172,7 @@ section {
 
 $boxColor: #171c49;
 .projectItem {
-  background: 
-    linear-gradient($boxColor, $boxColor) padding-box,
-    variables.$gradient border-box;
+  background: linear-gradient($boxColor, $boxColor) padding-box, variables.$gradient border-box;
   border-radius: 10px;
   border: 3px solid transparent;
   padding: 1rem;
@@ -182,7 +180,7 @@ $boxColor: #171c49;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  
+
   .title {
     padding: 0;
     margin: 0;
@@ -192,6 +190,7 @@ $boxColor: #171c49;
 
     img {
       height: 1em;
+      object-fit: cover;
     }
   }
 
@@ -222,8 +221,7 @@ $boxColor: #171c49;
 }
 
 .projectItem:nth-child(even) {
-  background: 
-    linear-gradient($boxColor, $boxColor) padding-box,
+  background: linear-gradient($boxColor, $boxColor) padding-box,
     linear-gradient(to right, #743ad5, variables.$primary) border-box;
 }
 
@@ -236,7 +234,8 @@ $boxColor: #171c49;
 // Contact section
 .contact {
   margin-bottom: 1rem;
-  input, textarea {
+  input,
+  textarea {
     background-color: #e2e2e7;
     border: 1px solid #999999;
     border-radius: 8px;
@@ -246,12 +245,12 @@ $boxColor: #171c49;
     margin-top: 5px;
   }
 
-  input:focus, textarea:focus {
-    box-shadow: 0 0 0 2px #ffffff,
-    0 0 0 5px variables.$tertiary;
-   outline: none;
-}
-  
+  input:focus,
+  textarea:focus {
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 5px variables.$tertiary;
+    outline: none;
+  }
+
   textarea {
     height: 140px;
     resize: none;
@@ -265,7 +264,8 @@ $boxColor: #171c49;
 
 @media screen and (max-width: 537px) {
   .contact {
-    input, textarea {
+    input,
+    textarea {
       width: 100%;
     }
   }
