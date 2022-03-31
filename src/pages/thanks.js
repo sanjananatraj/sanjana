@@ -6,7 +6,7 @@ const ThanksPage = () => (
   <Layout>
     <div className="page">
       <h1>Thank you!</h1>
-      <p>Thanks for reaching out. I'll try and respond as soon as I can :)</p>
+      <p>Thanks for reaching out. I&apos;ll try and respond as soon as I can :&#41;</p>
       <Link to="/">Go back home</Link>
     </div>
   </Layout>

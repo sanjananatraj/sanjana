@@ -23,13 +23,4 @@ module.exports = {
       version: "detect", // React version. "detect" automatically picks the version you have installed.
     },
   },
-  parserOptions: {
-    ecmaVersion: 6,
-    sourceType: "module",
-    allowImportExportEverywhere: true,
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
-  parser: "@babel/eslint-parser",
 }

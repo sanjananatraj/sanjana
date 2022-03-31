@@ -37,7 +37,7 @@ const AboutMe = ({ pageRefs }) => {
         Now with my Bachelor&apos;s degree in computer science from UCSC, I&apos;m currently seeking
         out new opportunities for front end/full stack software engineering positions! Reach out to
         me by <a href="mailto:sanjana.natraj319@gmail.com">sending me an email</a> or by using the{" "}
-        <a onClick={scrollToContact}>contact form below</a>. I'm also available on{" "}
+        <a onClick={scrollToContact}>contact form below</a>. I&apos;m also available on{" "}
         <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/sanjana-natraj/">
           LinkedIn
         </a>

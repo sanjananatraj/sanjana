@@ -33,7 +33,7 @@ const AboutPage = () => {
             <b>SSD:</b> Samsung 970 Evo Plus 500 GB M.2-2280 NVME Solid State Drive
           </li>
           <li>
-            <b>HDD:</b> Seagate Barracuda 2 TB 3.5" 7200RPM Internal Hard Drive
+            <b>HDD:</b> Seagate Barracuda 2 TB 3.5&quot; 7200RPM Internal Hard Drive
           </li>
         </ul>
       ),
@@ -51,19 +51,19 @@ const AboutPage = () => {
         <div className={styles.about}>
           <div className={styles.aboutContent}>
             <p>
-              Hello and welcome to my website! I'm Sanjana, an aspriring software engineer based in
-              the San Francisco Bay Area. This website is one of my creations that I built to
-              showcase my open source projects, talk about the tech industry, link useful resources,
-              and more! My goal is to continually update and add to this site as I build all sorts
-              of things.
+              Hello and welcome to my website! I&apos;m Sanjana, an aspriring software engineer
+              based in the San Francisco Bay Area. This website is one of my creations that I built
+              to showcase my open source projects, talk about the tech industry, link useful
+              resources, and more! My goal is to continually update and add to this site as I build
+              all sorts of things.
             </p>
             <h4>A bit more about me</h4>
             <p>
               My interest in tech started in high school, where I found myself using the internet
               more. I grew up in Foster City, CA, which had an abundance of tech companies all
-              around! I was lucky enough to go on field trips to Google's Mountain View campus and
-              Facebook's Menlo Park campus, which made me want to study computer science. I took
-              APCS and joined my local{" "}
+              around! I was lucky enough to go on field trips to Google&apos;s Mountain View campus
+              and Facebook&apos;s Menlo Park campus, which made me want to study computer science. I
+              took APCS and joined my local{" "}
               <a target="_blank" rel="noreferrer" href="https://girlswhocode.com/">
                 Girls Who Code
               </a>{" "}
@@ -88,11 +88,11 @@ const AboutPage = () => {
           Outside of coding, some of my favorite things to do are play video games, watch some
           streams on Twitch, practice my photography skills, and cook. Some of the games I play are
           Overwatch, Valorant, and Apex Legends! I enjoy FPS games, but I also love to get immersed
-          in single player games. Currently, I'm playing through Yakuza: Like a Dragon, which is
-          probably one of my favorite JRPGs to date, right behind Persona 5.
+          in single player games. Currently, I&apos;m playing through Yakuza: Like a Dragon, which
+          is probably one of my favorite JRPGs to date, right behind Persona 5.
         </p>
         <p>
-          One hobby that I got into during quarantine was coffee. Before the pandemic, I wasn't
+          One hobby that I got into during quarantine was coffee. Before the pandemic, I wasn&apos;t
           really a coffee drinker, but I would drink some with my housemates with a french press in
           the mornings occasionally. I then researched more about coffee and learned about third
           wave coffee roasters and many different techniques to prepare coffee. I picked up a Hario
@@ -102,9 +102,10 @@ const AboutPage = () => {
           <Link to="/projects#twcb">build some projects around coffee</Link>, too.
         </p>
         <p>
-          Some other things I'm interested in are food science, pottery, pixel art, skincare, and
-          computer hardware. Feel free to <Link to="/#contact">send me a message</Link> to connect
-          if you'd like! I'm always open to meet new people and say hello. Thanks for reading!
+          Some other things I&apos;m interested in are food science, pottery, pixel art, skincare,
+          and computer hardware. Feel free to <Link to="/#contact">send me a message</Link> to
+          connect if you&apos;d like! I&apos;m always open to meet new people and say hello. Thanks
+          for reading!
         </p>
         <br></br>
         <h2>Tools</h2>
