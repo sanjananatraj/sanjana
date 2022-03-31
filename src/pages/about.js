@@ -57,9 +57,7 @@ const AboutPage = () => {
               and more! My goal is to continually update and add to this site as I build all sorts
               of things.
             </p>
-
             <h4>A bit more about me</h4>
-
             <p>
               My interest in tech started in high school, where I found myself using the internet
               more. I grew up in Foster City, CA, which had an abundance of tech companies all
