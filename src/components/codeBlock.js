@@ -1,6 +1,6 @@
 import React from "react"
 import Highlight, { defaultProps } from "prism-react-renderer"
-import theme from "prism-react-renderer/themes/nightOwl"
+import theme from "../themes"
 
 const CodeBlock = (props) => {
   const className = props.children.props.className || ""
