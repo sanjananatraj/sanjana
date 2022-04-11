@@ -43,6 +43,7 @@ const Project = ({ pageRefs }) => {
                 image={getImage(node.frontmatter.image)}
                 alt={node.frontmatter.image_alt}
               />
+              &nbsp;
               {node.frontmatter.title}
             </h6>
             <p>{node.frontmatter.summary}</p>

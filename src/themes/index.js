@@ -81,15 +81,21 @@ const theme = {
       },
     },
     {
-      types: ["tag", "operator", "keyword"],
+      types: ["tag", "keyword"],
       style: {
         color: "#ff67b3",
       },
     },
     {
+      types: ["operator"],
+      style: {
+        color: "#ff91ad",
+      },
+    },
+    {
       types: ["boolean"],
       style: {
-        color: "rgb(255, 88, 116)",
+        color: "#9987ff",
       },
     },
     {
