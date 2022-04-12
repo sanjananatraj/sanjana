@@ -129,6 +129,11 @@ $fontMono: "Roboto Mono", "monospace";
   pre {
     font-size: 16px;
     font-family: $fontMono;
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    white-space: pre-wrap;
+    word-break: keep-all;
   }
 }
 
