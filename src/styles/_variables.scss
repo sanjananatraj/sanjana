@@ -135,6 +135,14 @@ $fontMono: "Roboto Mono", "monospace";
     white-space: pre-wrap;
     word-break: keep-all;
   }
+
+  code {
+    font-family: $fontMono;
+    color: $secondary;
+    background-color: #1f235f;
+    padding: 2px;
+    line-height: 1.3;
+  }
 }
 
 @mixin headers {

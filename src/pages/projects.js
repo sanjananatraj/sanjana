@@ -30,7 +30,6 @@ const ProjectPage = ({ data }) => (
       </p>
 
       <p>Note: this page is still under construction.</p>
-
       <h2>Table of Contents</h2>
       <ul>
         {data.allMdx.nodes.map((node) => (
