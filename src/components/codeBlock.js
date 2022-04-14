@@ -18,18 +18,22 @@ const calculateLinesToHighlight = (meta) => {
 const CodeBlock = (props) => {
   const className = props.children.props.className || ""
   const matches = className.match(/language-(?<lang>.*)/)
+  const language = matches && matches.groups && matches.groups.lang ? matches.groups.lang : ""
+  const code = props.children.props.children.trim()
+
   const metastring = props.children.props.metastring || ""
+  const shouldHighlightLine = calculateLinesToHighlight(metastring)
+
   const [buttonText, setButtonText] = React.useState("Copy")
+  const [isHovering, setIsHovering] = React.useState(false)
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(props.children.props.children.trim())
+    navigator.clipboard.writeText(code)
     setButtonText("Copied!")
     setTimeout(() => {
       setButtonText("Copy")
     }, 2000)
   }
-
-  const [isHovering, setIsHovering] = React.useState(false)
 
   const handleMouseOver = () => {
     setIsHovering(true)
@@ -39,17 +43,10 @@ const CodeBlock = (props) => {
     setIsHovering(false)
   }
 
-  const shouldHighlightLine = calculateLinesToHighlight(metastring)
-
   return (
-    <Highlight
-      {...defaultProps}
-      code={props.children.props.children.trim()}
-      language={matches && matches.groups && matches.groups.lang ? matches.groups.lang : ""}
-      theme={theme}
-    >
+    <Highlight {...defaultProps} code={code} language={language} theme={theme}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <div className="gatsby-highlight">
+        <div className="gatsby-highlight" data-language={language}>
           <pre
             className={className}
             onMouseEnter={handleMouseOver}
