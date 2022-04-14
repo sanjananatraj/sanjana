@@ -28,7 +28,6 @@ const Nav = (props) => {
 
 Nav.propTypes = {
   pageRefs: PropTypes.object.isRequired,
-  setOpen: PropTypes.bool,
   class: PropTypes.string,
 }
 

@@ -4,7 +4,7 @@
 const theme = {
   plain: {
     color: "#d6deeb",
-    backgroundColor: "#0f1336",
+    backgroundColor: "rgb(15, 19, 54)",
   },
   styles: [
     {

@@ -1,22 +1,8 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { MDXProvider } from "@mdx-js/react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import CodeBlock from "../components/codeBlock"
-
-const components = {
-  pre: CodeBlock,
-}
-
-const MDXBlock = (props) => {
-  return (
-    <MDXProvider components={components}>
-      <MDXRenderer>{props.body}</MDXRenderer>
-    </MDXProvider>
-  )
-}
 
 const ProjectPage = ({ data }) => (
   <Layout>
@@ -41,7 +27,8 @@ const ProjectPage = ({ data }) => (
 
       {data.allMdx.nodes.map((node) => (
         <div id={node.slug} key={node.slug}>
-          <MDXBlock body={node.body} />
+          {/* <MDXBlock body={node.body} /> */}
+          <MDXRenderer>{node.body}</MDXRenderer>
         </div>
       ))}
     </div>

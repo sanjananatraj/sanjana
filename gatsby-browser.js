@@ -1,14 +1,11 @@
-// https://stackoverflow.com/questions/55336831/how-to-fix-gatsby-js-link-component-retaining-scroll-position-and-not-resetting
+import React from "react"
+import { MDXProvider } from "@mdx-js/react"
+import CodeBlock from "./src/components/codeBlock"
 
-// exports.shouldUpdateScroll = ({
-//   routerProps: { location },
-//   getSavedScrollPosition,
-// }) => {
-//   const { pathname } = location
-//   const routes = [`/`]
+const components = {
+  pre: CodeBlock,
+}
 
-//   if(routes.indexOf(pathname) !== -1) {
-//     window.scrollTo(0,0)
-//   }
-//   return false
-// }
+export const wrapRootElement = ({ element }) => {
+  return <MDXProvider components={components}>{element}</MDXProvider>
+}

@@ -24,15 +24,17 @@ const CodeBlock = (props) => {
   const metastring = props.children.props.metastring || ""
   const shouldHighlightLine = calculateLinesToHighlight(metastring)
 
-  const [buttonText, setButtonText] = React.useState("Copy")
+  const [isCopied, setIsCopied] = React.useState(false)
   const [isHovering, setIsHovering] = React.useState(false)
 
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(code)
-    setButtonText("Copied!")
-    setTimeout(() => {
-      setButtonText("Copy")
-    }, 2000)
+  const copyToClipboard = (code) => {
+    if (navigator.clipboard) {
+      // Most modern browsers support the Navigator API
+      navigator.clipboard.writeText(code)
+    } else if (window.clipboardData) {
+      // Internet Explorer
+      window.clipboardData.setData("Text", code)
+    }
   }
 
   const handleMouseOver = () => {
@@ -56,8 +58,15 @@ const CodeBlock = (props) => {
             }}
           >
             {isHovering && (
-              <button className="copy-button" onClick={copyToClipboard}>
-                {buttonText}
+              <button
+                className="copy-button"
+                onClick={() => {
+                  copyToClipboard(code)
+                  setIsCopied(true)
+                  setTimeout(() => setIsCopied(false), 2000)
+                }}
+              >
+                {isCopied ? "🎉 Copied!" : "Copy"}
               </button>
             )}
 
