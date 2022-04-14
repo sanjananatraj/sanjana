@@ -1,24 +1,27 @@
 import React from "react"
+import rangeParser from "parse-numeric-range"
 import Highlight, { defaultProps } from "prism-react-renderer"
 import theme from "../themes"
+import "../styles/codeBlock.scss"
+
+const calculateLinesToHighlight = (meta) => {
+  const RE = /{([\d,-]+)}/
+  if (RE.test(meta)) {
+    const strlineNumbers = RE.exec(meta)[1]
+    const lineNumbers = rangeParser(strlineNumbers)
+    return (index) => lineNumbers.includes(index + 1)
+  } else {
+    return () => false
+  }
+}
 
 const CodeBlock = (props) => {
   const className = props.children.props.className || ""
   const matches = className.match(/language-(?<lang>.*)/)
-
-  const lineNumberStyle = {
-    marginRight: "20px",
-    color: "#6b6d96",
-  }
-
+  const metastring = props.children.props.metastring || ""
   const [buttonText, setButtonText] = React.useState("Copy")
-  const copyButtonStyle = {
-    float: "right",
-    padding: "10px",
-    marginLeft: "20px",
-  }
 
-  const onCopyClick = () => {
+  const copyToClipboard = () => {
     navigator.clipboard.writeText(props.children.props.children.trim())
     setButtonText("Copied!")
     setTimeout(() => {
@@ -36,6 +39,8 @@ const CodeBlock = (props) => {
     setIsHovering(false)
   }
 
+  const shouldHighlightLine = calculateLinesToHighlight(metastring)
+
   return (
     <Highlight
       {...defaultProps}
@@ -44,28 +49,39 @@ const CodeBlock = (props) => {
       theme={theme}
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre
-          className={className}
-          onMouseEnter={handleMouseOver}
-          onMouseLeave={handleMouseOut}
-          style={{ ...style, padding: "20px" }}
-        >
-          <div>
+        <div className="gatsby-highlight">
+          <pre
+            className={className}
+            onMouseEnter={handleMouseOver}
+            onMouseLeave={handleMouseOut}
+            style={{
+              ...style,
+            }}
+          >
             {isHovering && (
-              <button style={copyButtonStyle} onClick={onCopyClick}>
+              <button className="copy-button" onClick={copyToClipboard}>
                 {buttonText}
               </button>
             )}
-            {tokens.map((line, i) => (
-              <div key={i} {...getLineProps({ line, key: i })}>
-                <span style={lineNumberStyle}>{i + 1}</span>
-                {line.map((token, key) => (
-                  <span key={key} {...getTokenProps({ token, key })} />
-                ))}
-              </div>
-            ))}
-          </div>
-        </pre>
+
+            {tokens.map((line, i) => {
+              const lineProps = getLineProps({ line, key: i })
+
+              if (shouldHighlightLine(i)) {
+                lineProps.className = `${lineProps.className} highlight-line`
+              }
+
+              return (
+                <div {...lineProps}>
+                  <span className="line-number-style">{i + 1}</span>
+                  {line.map((token, key) => (
+                    <span {...getTokenProps({ token, key })} />
+                  ))}
+                </div>
+              )
+            })}
+          </pre>
+        </div>
       )}
     </Highlight>
   )

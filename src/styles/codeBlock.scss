@@ -1,0 +1,54 @@
+@use "variables";
+@include variables.global;
+
+// https://www.lekoarts.de/garden/adding-line-numbers-and-code-highlighting-to-mdx
+
+.prism-code {
+  padding: 1.2rem 0;
+  -webkit-overflow-scrolling: touch;
+  background-color: transparent;
+  overflow-x: auto;
+  font-size: 16px;
+  font-family: variables.$fontMono;
+}
+
+.gatsby-highlight {
+  font-size: 1rem;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+}
+
+.gatsby-highlight pre[class*="language-"] {
+  background-color: transparent;
+  float: left;
+  min-width: 100%;
+}
+
+.line-number-style {
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 1.2em;
+  user-select: none;
+  opacity: 0.3;
+  text-align: center;
+  position: relative;
+}
+
+.copy-button {
+  float: right;
+  padding: 10px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.highlight-line {
+  background-color: #1f2660;
+  border-left: 3px solid #ff67b3;
+}
+
+.highlight-line .line-number-style {
+  opacity: 0.5;
+  width: calc(1.2em - 4px);
+  left: -3px;
+}

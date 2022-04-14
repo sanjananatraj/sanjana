@@ -18,7 +18,7 @@ stack:
 Third Wave Coffee Base is definitely one my favorite projects I've ever built (sorry, other projects!)
 The `sum` function
 
-```javascript
+```js {2,3-4}
 function myFunction() {
   const iterable = [10, 20, 30]
   for (const value of iterable) {
@@ -27,5 +27,89 @@ function myFunction() {
   const str = "Hello, world!"
   const isOpen = true
   // this is a comment
+}
+```
+
+```jsx {38}
+const CodeBlock = (props) => {
+  const className = props.children.props.className || ""
+  const matches = className.match(/language-(?<lang>.*)/)
+  const metastring = props.children.props.metastring || ""
+  console.log(className)
+
+  const [buttonText, setButtonText] = React.useState("Copy")
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(props.children.props.children.trim())
+    setButtonText("Copied!")
+    setTimeout(() => {
+      setButtonText("Copy")
+    }, 2000)
+  }
+
+  const [isHovering, setIsHovering] = React.useState(false)
+
+  const handleMouseOver = () => {
+    setIsHovering(true)
+  }
+
+  const handleMouseOut = () => {
+    setIsHovering(false)
+  }
+
+  const calculateLinesToHighlight = (meta) => {
+    const RE = /{([\d,-]+)}/
+    if (RE.test(meta)) {
+      const strlineNumbers = RE.exec(meta)[1]
+      const lineNumbers = rangeParser(strlineNumbers)
+      return (index) => lineNumbers.includes(index + 1)
+    } else {
+      return () => false
+    }
+  }
+
+  const shouldHighlightLine = calculateLinesToHighlight(metastring)
+
+  return (
+    <Highlight
+      {...defaultProps}
+      code={props.children.props.children.trim()}
+      language={matches && matches.groups && matches.groups.lang ? matches.groups.lang : ""}
+      theme={theme}
+    >
+      {({ className, style, tokens, getLineProps, getTokenProps }) => (
+        <div className="gatsby-highlight">
+          <pre
+            className={className}
+            onMouseEnter={handleMouseOver}
+            onMouseLeave={handleMouseOut}
+            style={style}
+          >
+            {isHovering && (
+              <button className="copyButton" onClick={copyToClipboard}>
+                {buttonText}
+              </button>
+            )}
+
+            {tokens.map((line, i) => {
+              const lineProps = getLineProps({ line, key: i })
+              if (shouldHighlightLine(i)) {
+                lineProps.className = `${lineProps.className} highlight-line`
+              }
+
+              return (
+                <div key={i} {...lineProps}>
+                  <span className="lineNumber">{i + 1}</span>
+                  {line.map((token, key) => (
+                    <span key={key} {...getTokenProps({ token, key })} />
+                  ))}
+                </div>
+              )
+            })}
+          </pre>
+        </div>
+      )}
+    </Highlight>
+  )
 }
 ```

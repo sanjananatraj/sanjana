@@ -4,7 +4,7 @@
 const theme = {
   plain: {
     color: "#d6deeb",
-    backgroundColor: "#1f235f",
+    backgroundColor: "#0f1336",
   },
   styles: [
     {
@@ -38,7 +38,7 @@ const theme = {
     {
       types: ["string", "url"],
       style: {
-        color: "rgb(173, 219, 103)",
+        color: "#FAE8B6",
       },
     },
     {
@@ -77,7 +77,7 @@ const theme = {
     {
       types: ["class-name"],
       style: {
-        color: "rgb(255, 203, 139)",
+        color: "#ffbd8b",
       },
     },
     {
@@ -89,25 +89,31 @@ const theme = {
     {
       types: ["operator"],
       style: {
-        color: "#ff91ad",
+        color: "#ff809d",
       },
     },
     {
       types: ["boolean"],
       style: {
-        color: "#9987ff",
+        color: "#a08fff",
       },
     },
     {
       types: ["property"],
       style: {
-        color: "rgb(128, 203, 196)",
+        color: "#7dc1c9",
       },
     },
     {
       types: ["namespace"],
       style: {
         color: "rgb(178, 204, 214)",
+      },
+    },
+    {
+      types: ["parameter"],
+      style: {
+        color: "#74cc93",
       },
     },
   ],
