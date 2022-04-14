@@ -57,6 +57,7 @@ const CodeBlock = (props) => {
               ...style,
             }}
           >
+            <div className="lang-name">{language}</div>
             {isHovering && (
               <button
                 className="copy-button"
@@ -70,22 +71,24 @@ const CodeBlock = (props) => {
               </button>
             )}
 
-            {tokens.map((line, i) => {
-              const lineProps = getLineProps({ line, key: i })
+            <div className="code-lines">
+              {tokens.map((line, i) => {
+                const lineProps = getLineProps({ line, key: i })
 
-              if (shouldHighlightLine(i)) {
-                lineProps.className = `${lineProps.className} highlight-line`
-              }
+                if (shouldHighlightLine(i)) {
+                  lineProps.className = `${lineProps.className} highlight-line`
+                }
 
-              return (
-                <div {...lineProps}>
-                  <span className="line-number-style">{i + 1}</span>
-                  {line.map((token, key) => (
-                    <span {...getTokenProps({ token, key })} />
-                  ))}
-                </div>
-              )
-            })}
+                return (
+                  <div {...lineProps}>
+                    <span className="line-number-style">{i + 1}</span>
+                    {line.map((token, key) => (
+                      <span {...getTokenProps({ token, key })} />
+                    ))}
+                  </div>
+                )
+              })}
+            </div>
           </pre>
         </div>
       )}
