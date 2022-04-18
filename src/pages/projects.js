@@ -27,7 +27,6 @@ const ProjectPage = ({ data }) => (
 
       {data.allMdx.nodes.map((node) => (
         <div id={node.slug} key={node.slug}>
-          {/* <MDXBlock body={node.body} /> */}
           <MDXRenderer>{node.body}</MDXRenderer>
         </div>
       ))}

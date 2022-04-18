@@ -11,8 +11,9 @@ const Project = ({ pageRefs }) => {
       allMdx(sort: { order: ASC, fields: frontmatter___order }) {
         nodes {
           frontmatter {
-            external
+            title
             github
+            external
             image {
               childImageSharp {
                 gatsbyImageData
@@ -22,7 +23,6 @@ const Project = ({ pageRefs }) => {
             order
             stack
             summary
-            title
           }
         }
       }
@@ -46,7 +46,9 @@ const Project = ({ pageRefs }) => {
               &nbsp;
               {node.frontmatter.title}
             </h6>
+
             <p>{node.frontmatter.summary}</p>
+
             <nav className={styles.links}>
               {node.frontmatter.github && (
                 <a target="_blank" rel="noreferrer" href={node.frontmatter.github}>
@@ -59,6 +61,7 @@ const Project = ({ pageRefs }) => {
                 </a>
               )}
             </nav>
+
             <div className={styles.techList}>
               {node.frontmatter.stack.map((tech, index) => (
                 <span key={index}>{tech}</span>
