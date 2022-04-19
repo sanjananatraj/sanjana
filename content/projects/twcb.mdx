@@ -15,100 +15,62 @@ stack:
 
 ### Third Wave Coffee Base
 
-Third Wave Coffee Base is definitely one my favorite projects I've ever built (sorry, other projects!)
-The `sum` function
+Third Wave Coffee Base is definitely one my favorite projects I've ever built (sorry, other projects!). The idea for this project came about as my personal hobby in coffee began to expand. I loved learning about third wave coffee roasters, coffees from different origins, their tasting notes, and so much more. Around every month or so, I'd do some research into buying a new bag of coffee beans, usually looking through any local roasters here in the Bay Area. Then, one day I thought to myself: what if I made an API with data from these coffee listings to compare their properties? I looked around and I didn't find anything else like it, so I went to building.
 
-```js {2,3-4}
-function myFunction() {
-  const iterable = [10, 20, 30]
-  for (const value of iterable) {
-    console.log(value)
-  }
-  const str = "Hello, world!"
-  const isOpen = true
-  // this is a comment
+Before this project, I had some familiarity with Python, but absolutely no experience with web scraping. Luckily, [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), the library I used for scraping, was easy to pick up. After grabbing the URL that displays a roaster's store, I just had to create a `soup` object:
+
+```python
+def soupify(roaster_id, coffeeDict, pageURL, baseURL):
+  coffeeObjs = []
+  soup = BeautifulSoup(pageURL.content, 'html.parser');
+```
+
+... where `roaster_id` was a random one I generated, and `coffeeDict` was a Python dictionary that contained the HTML classes that contained the info I needed: the price, title, and description of that coffee. I just had to repeat that for over 50 roasters, which was a bit time consuming to find out each HTML class, but it was well worth the effort. To make things easier, I created a `coffeeSite` class that took in all these properties:
+
+```python
+redbay = CoffeeSite("Red Bay Coffee", "https://www.redbaycoffee.com/", "https://www.redbaycoffee.com/collections/coffee")
+roaster_id = getRoasterID(redbay.name)
+redbay.add_class("parentDiv", ("grid--uniform", "div"))
+redbay.add_class("coffeeDiv", ("grid__item", "div"));
+redbay.add_class("title", ("name_wrapper", "p"));
+redbay.add_class("price", ("price_wrapper", "p"));
+redbay.add_class("desc", (".rte", "div"));
+```
+
+The challenges I had with this project were largely with hosting. I never hosted a Python web application before, so I had to weigh my options and figure that out. I ended up going with Google App Engine, as I was hosting my database with Google Cloud SQL. Transitioning my database from local to online was also difficult for me, as there was a ton of documentation to go through to get your database setup online.
+
+Overall though, I learned a ton more about SQL, connecting SQL databases to Python apps, and a lot more about backend programming, something I'm not as familiar with compared to front end development. Using Flask to create routing and exposing the data was also really fun to learn.Using flask-restful to organize my resources into classes was instrumental to organize all my endpoints. Here's some of the code for the `/coffee` endpoint, for example:
+
+```python
+cursor.execute("""
+select coffee.coffee_id, coffee.name, price, description, coffee.origin, coffee.type, coffee.process, coffee.roast_level, coffee.tasting_notes, roaster.name from coffee
+join roaster on roaster.roaster_id = coffee.roaster_id
+where coffee.name=%s
+""", name)
+result = cursor.fetchone()
+content = {}
+
+if result:
+if result[8]: # if coffee listing has info about tasting notes that are in string form, split into array
+  tasting_notes = result[8].split(",")
+content = {
+    'id': result[0],
+    'name': result[1],
+    'price': result[2],
+    'description': result[3],
+    'origin': result[4],
+    'type': result[5],
+    'process': result[6],
+    'roastLevel': result[7],
+    'tastingNotes': [s.strip() for s in tasting_notes] if result[8] else [],
+    'roaster': result[9]
 }
 ```
 
-```jsx {31}
-const CodeBlock = (props) => {
-  const className = props.children.props.className || ""
-  const matches = className.match(/language-(?<lang>.*)/)
-  const language = matches && matches.groups && matches.groups.lang ? matches.groups.lang : ""
-  const code = props.children.props.children.trim()
+It was a bit of a challenge connecting [docsify](https://docsify.js.org/#/) to my Flask app, but I was able to make it work. I'm really happy with how this project turned out, and there's always room for expansion! Some features I'd eventually like to add are:
 
-  const metastring = props.children.props.metastring || ""
-  const shouldHighlightLine = calculateLinesToHighlight(metastring)
+- Create a script that automatically runs each roaster script, compares listings with existing database for new entries, and adds them
+- Since coffees come in and out of rotation, add a property that checks if a certain listing is still available for purchase
+- More roasters! Expand from Norcal based ones to all of California, and hopefully the entire country
 
-  const [isCopied, setIsCopied] = React.useState(false)
-  const [isHovering, setIsHovering] = React.useState(false)
-
-  const copyToClipboard = (code) => {
-    if (navigator.clipboard) {
-      // Most modern browsers support the Navigator API
-      navigator.clipboard.writeText(code)
-    } else if (window.clipboardData) {
-      // Internet Explorer
-      window.clipboardData.setData("Text", code)
-    }
-  }
-
-  const handleMouseOver = () => {
-    setIsHovering(true)
-  }
-
-  const handleMouseOut = () => {
-    setIsHovering(false)
-  }
-
-  return (
-    <Highlight {...defaultProps} code={code} language={language} theme={theme}>
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <div className="gatsby-highlight" data-language={language}>
-          <pre
-            className={className}
-            onMouseEnter={handleMouseOver}
-            onMouseLeave={handleMouseOut}
-            style={{
-              ...style,
-            }}
-          >
-            <div className="lang-name">{language}</div>
-            {isHovering && (
-              <button
-                className="copy-button"
-                onClick={() => {
-                  copyToClipboard(code)
-                  setIsCopied(true)
-                  setTimeout(() => setIsCopied(false), 2000)
-                }}
-              >
-                {isCopied ? "🎉 Copied!" : "Copy"}
-              </button>
-            )}
-
-            <div className="code-lines">
-              {tokens.map((line, i) => {
-                const lineProps = getLineProps({ line, key: i })
-
-                if (shouldHighlightLine(i)) {
-                  lineProps.className = `${lineProps.className} highlight-line`
-                }
-
-                return (
-                  <div {...lineProps}>
-                    <span className="line-number-style">{i + 1}</span>
-                    {line.map((token, key) => (
-                      <span {...getTokenProps({ token, key })} />
-                    ))}
-                  </div>
-                )
-              })}
-            </div>
-          </pre>
-        </div>
-      )}
-    </Highlight>
-  )
-}
-```
+One final thing I'm also thinking about is converting it to a static API to help reduce database hosting costs. But for now, it'll remain as a dynamic API, and my biggest project so far.
