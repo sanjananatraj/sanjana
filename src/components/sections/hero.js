@@ -19,8 +19,10 @@ const Hero = ({ pageRefs }) => (
     <p>
       I&apos;m a software engineer with a love for front end web development. I love building
       open-source projects and working with front end technologies/frameworks such as React,
-      JavaScript, and more! I am currently looking for new opportunities as a full time software
-      engineer.{" "}
+      JavaScript, and more! Currently, I work as a full stack engineer @{" "}
+      <a target="_blank" rel="noreferrer" href="https://www.fidelity.com/">
+        Fidelity Investments.
+      </a>{" "}
     </p>
   </section>
 )

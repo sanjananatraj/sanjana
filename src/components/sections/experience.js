@@ -5,8 +5,19 @@ import spring from "../../images/icons8-spring-100.png"
 
 const jobs = [
   {
+    company: "Fidelity Investments",
+    title: "Full Stack Engineer",
+    descriptions: [
+      "Developed client side features and UI changes for an equity research application with Angular and TypeScript",
+      "Implemented routes and services connecting to external APIs containing market data with Node.js",
+      "Wrote unit and E2E tests with Jasmine, Karma, and Cypress",
+      "Worked in an collaborative agile environment with a cross-functional team to receive design requirements and business analysis on features",
+    ],
+  },
+
+  {
     company: "ZeroUI",
-    title: "Software Engineer",
+    title: "Software Engineering Intern",
     descriptions: [
       "Optimized website's loading speed by 43% by implementing infinite scrolling using React, Async JavaScript, and Flask",
       "Implemented playlist functionality, explore page, and user profile pages with Bootstrap and SASS",

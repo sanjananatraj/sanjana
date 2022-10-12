@@ -43,10 +43,9 @@ const Contact = ({ pageRefs }) => {
         <img src={globe} alt="blue globe"></img> Contact
       </h1>
       <p>
-        I&apos;m currently open to new opportunities in software engineering. I&apos;m based in the
-        Bay Area, but I&apos;m willing to relocate/work remotely. You can either{" "}
-        <a href="mailto:sanjana.natraj319@gmail.com">send me an email</a> or use the form below to
-        contact me. I&apos;ll try my best to respond as soon as possible!
+        I&apos;m not actively looking for any opportunities right now, but I&apos;d love to still
+        say hello! You can either <a href="mailto:sanjana.natraj319@gmail.com">send me an email</a>{" "}
+        or use the form below to contact me. I&apos;ll try my best to respond as soon as possible!
       </p>
 
       <form
