@@ -81,7 +81,7 @@ const CodeBlock = (props) => {
 
                 return (
                   <div {...lineProps}>
-                    <span className="line-number-style">{i + 1}</span>
+                    {/* <span className="line-number-style">{i + 1}</span> */}
                     {line.map((token, key) => (
                       <span {...getTokenProps({ token, key })} />
                     ))}

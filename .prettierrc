@@ -1,6 +1,7 @@
 {
   "arrowParens": "always",
-  "semi": false,
   "bracketSpacing": true,
+  "bracketSameLine": true,
+  "semi": false,
   "printWidth": 100
 }

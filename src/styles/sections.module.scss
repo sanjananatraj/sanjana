@@ -35,6 +35,7 @@ section {
     line-height: 1;
     margin: 0;
     font-family: variables.$fontSans;
+    font-weight: 700;
   }
 
   h3 {
@@ -135,9 +136,10 @@ section {
 
   h4 {
     margin: 0;
+    font-weight: bold;
   }
 
-  h6 {
+  h5 {
     margin-top: 5px;
     font-family: variables.$fontMono;
     font-size: 0.9rem;
@@ -173,7 +175,7 @@ section {
   grid-auto-rows: 1fr;
 }
 
-$boxColor: #171c49;
+$boxColor: #0c3629;
 .projectItem {
   background: linear-gradient($boxColor, $boxColor) padding-box, variables.$gradient border-box;
   border-radius: 10px;
@@ -225,10 +227,10 @@ $boxColor: #171c49;
 
 .projectItem:nth-child(even) {
   background: linear-gradient($boxColor, $boxColor) padding-box,
-    linear-gradient(to right, #743ad5, variables.$primary) border-box;
+    linear-gradient(to right, #672eca, variables.$primary) border-box;
 }
 
-@media screen and(max-width: 775px) {
+@media screen and (max-width: 775px) {
   .projectList {
     grid-row-gap: 15px;
   }

@@ -19,7 +19,7 @@ Third Wave Coffee Base is definitely one my favorite projects I've ever built (s
 
 Before this project, I had some familiarity with Python, but absolutely no experience with web scraping. Luckily, [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), the library I used for scraping, was easy to pick up. After grabbing the URL that displays a roaster's store, I just had to create a `soup` object:
 
-```python
+```python {1}
 def soupify(roaster_id, coffeeDict, pageURL, baseURL):
   coffeeObjs = []
   soup = BeautifulSoup(pageURL.content, 'html.parser');

@@ -51,11 +51,11 @@ const AboutPage = () => {
         <div className={styles.about}>
           <div className={styles.aboutContent}>
             <p>
-              Hello and welcome to my website! I&apos;m Sanjana, an aspriring software engineer
-              based in the San Francisco Bay Area. This website is one of my creations that I built
-              to showcase my open source projects, talk about the tech industry, link useful
-              resources, and more! My goal is to continually update and add to this site as I build
-              all sorts of things.
+              Hello and welcome to my website! I&apos;m Sanjana, a software engineer from the San
+              Francisco Bay Area, but I currently live in Boston, MA. This website is one of my
+              creations that I built to showcase my open source projects, talk about the tech
+              industry, link useful resources, and more! My goal is to continually update and add to
+              this site as I build all sorts of things.
             </p>
             <h4>A bit more about me</h4>
             <p>
@@ -88,8 +88,7 @@ const AboutPage = () => {
           Outside of coding, some of my favorite things to do are play video games, watch some
           streams on Twitch, practice my photography skills, and cook. Some of the games I play are
           Overwatch, Valorant, and Apex Legends! I enjoy FPS games, but I also love to get immersed
-          in single player games. Currently, I&apos;m playing through Yakuza: Like a Dragon, which
-          is probably one of my favorite JRPGs to date, right behind Persona 5.
+          in single player games.
         </p>
         <p>
           One hobby that I got into during quarantine was coffee. Before the pandemic, I wasn&apos;t

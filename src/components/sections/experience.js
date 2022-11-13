@@ -89,7 +89,7 @@ const Experience = ({ pageRefs }) => (
         <React.Fragment key={index}>
           <div className={styles.expChild}>
             <h4>{job.company}</h4>
-            <h6>{job.title}</h6>
+            <h5>{job.title}</h5>
           </div>
 
           <ul className={styles.expChild}>
@@ -109,7 +109,7 @@ const Experience = ({ pageRefs }) => (
         <React.Fragment key={index}>
           <div className={styles.expChild}>
             <h4>{extra.org}</h4>
-            <h6>{extra.title}</h6>
+            <h5>{extra.title}</h5>
           </div>
 
           <ul className={styles.expChild}>
