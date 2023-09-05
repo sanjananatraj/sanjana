@@ -4,7 +4,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const ProjectPage = ({ data }) => (
+const ProjectPage = () => (
   <Layout>
     <div className="page">
       <Seo title="Projects" />
@@ -17,35 +17,37 @@ const ProjectPage = ({ data }) => (
 
       <p>Note: this page is still under construction.</p>
       <h2>Table of Contents</h2>
-      <ul>
+      {/* <ul>
         {data.allMdx.nodes.map((node) => (
-          <li key={node.slug}>
-            <a href={`#${node.slug}`}>{node.frontmatter.title}</a>
+          <li key={node.fields.slug}>
+            <a href={`#${node.fields.slug}`}>{node.frontmatter.title}</a>
           </li>
         ))}
       </ul>
 
       {data.allMdx.nodes.map((node) => (
-        <div id={node.slug} key={node.slug}>
+        <div id={node.fields.slug} key={node.fields.slug}>
           <MDXRenderer>{node.body}</MDXRenderer>
         </div>
-      ))}
+      ))} */}
     </div>
   </Layout>
 )
 
-export const query = graphql`
-  query {
-    allMdx(sort: { fields: frontmatter___order, order: ASC }) {
-      nodes {
-        body
-        frontmatter {
-          title
-        }
-        slug
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query {
+//     allMdx(sort: {frontmatter: {order: ASC}}) {
+//       nodes {
+//         body
+//         frontmatter {
+//           title
+//         }
+//         fields {
+//           slug
+//         }
+//       }
+//     }
+//   }
+// `
 
 export default ProjectPage

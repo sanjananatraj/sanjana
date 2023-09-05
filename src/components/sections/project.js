@@ -8,21 +8,23 @@ import sun from "../../images/icons8-sun-128.png"
 const Project = ({ pageRefs }) => {
   const data = useStaticQuery(graphql`
     query {
-      allMdx(sort: { order: ASC, fields: frontmatter___order }) {
+      allFile(filter: {sourceInstanceName: {eq: "projects"}}, sort: { childMdx: { frontmatter: { order: ASC} } } ) {
         nodes {
-          frontmatter {
-            title
-            github
-            external
-            image {
-              childImageSharp {
-                gatsbyImageData
+          childMdx {
+            frontmatter {
+              title
+              github
+              external
+              image {
+                childImageSharp {
+                  gatsbyImageData
+                }
               }
+              image_alt
+              order
+              stack
+              summary
             }
-            image_alt
-            order
-            stack
-            summary
           }
         }
       }
@@ -36,34 +38,34 @@ const Project = ({ pageRefs }) => {
       </h1>
       ➡️<Link to="/projects">View more details about my projects</Link>
       <div className={styles.projectList}>
-        {data.allMdx.nodes.map((node, index) => (
+        {data.allFile.nodes.map((node, index) => (
           <div className={styles.projectItem} key={index}>
             <h6 className={styles.title}>
               <GatsbyImage
-                image={getImage(node.frontmatter.image)}
-                alt={node.frontmatter.image_alt}
+                image={getImage(node.childMdx.frontmatter.image)}
+                alt={node.childMdx.frontmatter.image_alt}
               />
               &nbsp;
-              {node.frontmatter.title}
+              {node.childMdx.frontmatter.title}
             </h6>
 
-            <p>{node.frontmatter.summary}</p>
+            <p>{node.childMdx.frontmatter.summary}</p>
 
             <nav className={styles.links}>
-              {node.frontmatter.github && (
-                <a target="_blank" rel="noreferrer" href={node.frontmatter.github}>
+              {node.childMdx.frontmatter.github && (
+                <a target="_blank" rel="noreferrer" href={node.childMdx.frontmatter.github}>
                   Github
                 </a>
               )}
-              {node.frontmatter.external && (
-                <a target="_blank" rel="noreferrer" href={node.frontmatter.external}>
+              {node.childMdx.frontmatter.external && (
+                <a target="_blank" rel="noreferrer" href={node.childMdx.frontmatter.external}>
                   Link
                 </a>
               )}
             </nav>
 
             <div className={styles.techList}>
-              {node.frontmatter.stack.map((tech, index) => (
+              {node.childMdx.frontmatter.stack?.map((tech, index) => (
                 <span key={index}>{tech}</span>
               ))}
             </div>

@@ -228,7 +228,7 @@ $boxColor: #171c49;
     linear-gradient(to right, #743ad5, variables.$primary) border-box;
 }
 
-@media screen and(max-width: 775px) {
+@media screen and (max-width: 775px) {
   .projectList {
     grid-row-gap: 15px;
   }
